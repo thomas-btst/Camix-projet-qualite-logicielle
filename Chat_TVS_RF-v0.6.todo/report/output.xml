@@ -1,0 +1,3157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.0 on win32)" generated="2026-05-03T13:52:22.486067" rpa="false" schemaversion="5">
+<suite id="s1" name="Chat TVS RF-v0.6.todo" source="C:\Users\helen\Documents\toto\qualite\robot_framework\Chat_TVS_RF-v0.6.todo">
+<suite id="s1-s1" name="Test" source="C:\Users\helen\Documents\toto\qualite\robot_framework\Chat_TVS_RF-v0.6.todo\test">
+<suite id="s1-s1-s1" name="US" source="C:\Users\helen\Documents\toto\qualite\robot_framework\Chat_TVS_RF-v0.6.todo\test\US">
+<suite id="s1-s1-s1-s1" name="US-SeConnecterAuChat" source="C:\Users\helen\Documents\toto\qualite\robot_framework\Chat_TVS_RF-v0.6.todo\test\US\US-SeConnecterAuChat.robot">
+<test id="s1-s1-s1-s1-t1" name="AC - Afficher vue connexion" line="34">
+<kw name="Afficher vue connexion" owner="SeConnecterAuChat">
+<kw name="When L'utilisateur lance le client chat" owner="FelixJava" source_name="l'${utilisateur} lance le client chat">
+<kw name="Start Application" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:23.014823" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:52:23.014892" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:52:23.015051" level="INFO">-javaagent:"C:\Users\helen\Documents\toto\qualite\robot_framework\remoteswinglibrary-2.3.3.jar"=127.0.0.1:60982</msg>
+<msg time="2026-05-03T13:52:23.015098" level="INFO">Java version &gt; 9: True</msg>
+<msg time="2026-05-03T13:52:23.020077" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Felix_Java-0.6.jar</msg>
+<msg time="2026-05-03T13:52:25.777439" level="INFO">connecting to started application at 127.0.0.1:60983</msg>
+<msg time="2026-05-03T13:52:25.777616" level="INFO">waiting for api at 127.0.0.1:60983</msg>
+<msg time="2026-05-03T13:52:26.065062" level="INFO">api is ready</msg>
+<msg time="2026-05-03T13:52:26.065162" level="INFO">connected to started application at 127.0.0.1:60983</msg>
+<msg time="2026-05-03T13:52:26.065808" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<arg>${utilisateur}</arg>
+<arg>java -Duser.language\=fr -Duser.country\=FR -jar SUT/Felix_Java-0.6.jar</arg>
+<arg>stdout=/dev/null</arg>
+<arg>stderr=/dev/null</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<status status="PASS" start="2026-05-03T13:52:23.014394" elapsed="3.051586"/>
+</kw>
+<kw name="Set Jemmy Timeouts" owner="RemoteSwingLibrary">
+<arg>2</arg>
+<doc>Sets all relevant jemmy timeouts. 
+By default they are all set to 5 seconds.</doc>
+<status status="PASS" start="2026-05-03T13:52:26.066509" elapsed="0.533309"/>
+</kw>
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:26.600293" elapsed="0.000355"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:23.013285" elapsed="3.587647"/>
+</kw>
+<kw name="Then Seule la vue connexion est affichée" owner="FelixJava">
+<kw name="Window Should Be Open" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Fails if the window is not open.</doc>
+<status status="PASS" start="2026-05-03T13:52:26.602010" elapsed="0.055559"/>
+</kw>
+<kw name="Window Should Not Be Open" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Fails if the window is open.
+| `Window Should Not Be Open` | window |</doc>
+<status status="PASS" start="2026-05-03T13:52:26.658132" elapsed="2.019835"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:28.678901" elapsed="0.014012"/>
+</kw>
+<kw name="Component Should Be Visible" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Checks that component is visible.
+*N.B.* Regular expression can be used to select the dialog by prefixing the identifier with ``regexp=``.
+See more details in `[#Regular expressions|Regular expressions]` section.</doc>
+<status status="PASS" start="2026-05-03T13:52:28.693805" elapsed="0.062059"/>
+</kw>
+<kw name="Component Should Be Visible" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<doc>Checks that component is visible.
+*N.B.* Regular expression can be used to select the dialog by prefixing the identifier with ``regexp=``.
+See more details in `[#Regular expressions|Regular expressions]` section.</doc>
+<status status="PASS" start="2026-05-03T13:52:28.756689" elapsed="0.008923"/>
+</kw>
+<kw name="Component Should Be Visible" owner="RemoteSwingLibrary">
+<arg>information</arg>
+<doc>Checks that component is visible.
+*N.B.* Regular expression can be used to select the dialog by prefixing the identifier with ``regexp=``.
+See more details in `[#Regular expressions|Regular expressions]` section.</doc>
+<status status="PASS" start="2026-05-03T13:52:28.766314" elapsed="0.017224"/>
+</kw>
+<kw name="Component Should Be Visible" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Checks that component is visible.
+*N.B.* Regular expression can be used to select the dialog by prefixing the identifier with ``regexp=``.
+See more details in `[#Regular expressions|Regular expressions]` section.</doc>
+<status status="PASS" start="2026-05-03T13:52:28.784482" elapsed="0.023627"/>
+</kw>
+<kw name="Le champ IP contient ${IP_DEFAUT}" owner="FelixJava" source_name="le champ ${id} contient ${texte}">
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:28.844514" level="INFO">${texte_attendu} = 127.0.0.1</msg>
+<var>${texte_attendu}</var>
+<arg>${id}</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:28.810179" elapsed="0.034545"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${texte}</arg>
+<arg>${texte_attendu}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-05-03T13:52:28.845181" elapsed="0.000861"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:52:28.809341" elapsed="0.036853"/>
+</kw>
+<kw name="Le champ numérique port contient ${PORT_DEFAUT}" owner="FelixJava" source_name="le champ numérique ${id} contient ${nombre_attendu}">
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:28.857424" level="INFO">${nombre} = 12 345</msg>
+<var>${nombre}</var>
+<arg>${id}</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:28.847849" elapsed="0.009812"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${nombre}</arg>
+<arg>${nombre_attendu}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2026-05-03T13:52:28.858159" elapsed="0.000839"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:52:28.847125" elapsed="0.012011"/>
+</kw>
+<kw name="Le champ information contient ${MESSAGE_INFORMATION_CONNEXION}" owner="FelixJava" source_name="le champ ${id} contient ${texte}">
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:28.870272" level="INFO">${texte_attendu} = Saisir l'adresse et le port du serveur chat.</msg>
+<var>${texte_attendu}</var>
+<arg>${id}</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:28.860701" elapsed="0.009672"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${texte}</arg>
+<arg>${texte_attendu}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-05-03T13:52:28.870803" elapsed="0.000719"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:52:28.859973" elapsed="0.011728"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:26.601380" elapsed="2.270431"/>
+</kw>
+<kw name="l'utilisateur ferme le client chat" owner="FelixJava" type="TEARDOWN" source_name="l'${utilisateur} ferme le client chat">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:28.873055" elapsed="0.000261"/>
+</kw>
+<kw name="System Exit" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:31.576823" level="INFO">Connection died as expected</msg>
+<msg time="2026-05-03T13:52:31.577019" level="INFO">Waiting for process to complete.</msg>
+<doc>Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<status status="PASS" start="2026-05-03T13:52:28.873639" elapsed="2.703568"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:28.872369" elapsed="2.705026"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2026-05-03T13:52:23.012692" elapsed="8.564810"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2026-05-03T13:52:23.011291" elapsed="8.567517"/>
+</test>
+<test id="s1-s1-s1-s1-t2" name="AC - Se connecter au chat" line="38">
+<kw name="Se connecter au chat" owner="SeConnecterAuChat">
+<kw name="Given Le serveur chat est accessible @${IP_DEFAUT}:${PORT_DEFAUT}" owner="CamixJava" source_name="le serveur chat est accessible @${ip}:${port}">
+<kw name="Start Process" owner="Process">
+<msg time="2026-05-03T13:52:31.588064" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Camix_Java-0.6.jar</msg>
+<arg>java</arg>
+<arg>-Duser.language\=fr</arg>
+<arg>-Duser.country\=FR</arg>
+<arg>-jar</arg>
+<arg>SUT/Camix_Java-0.6.jar</arg>
+<arg>alias=Camix</arg>
+<doc>Starts a new process on background.</doc>
+<status status="PASS" start="2026-05-03T13:52:31.587123" elapsed="0.014485"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-03T13:52:32.604046" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-03T13:52:31.602501" elapsed="1.001827"/>
+</kw>
+<kw name="Process Should Be Running" owner="Process">
+<arg>Camix</arg>
+<arg>Le serveur Camix n'est pas accessible.</arg>
+<doc>Verifies that the process is running.</doc>
+<status status="PASS" start="2026-05-03T13:52:32.604940" elapsed="0.001796"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-03T13:52:32.607995" level="INFO">TODO: assurer que le serveur Camix est accessible @127.0.0.1:12345</msg>
+<arg>TODO: assurer que le serveur Camix est accessible @${ip}:${port}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-03T13:52:32.607249" elapsed="0.000859"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:31.586267" elapsed="1.021992"/>
+</kw>
+<kw name="And Plusieurs ${autres utilisateurs} sont connectés au chat (@${IP_DEFAUT}:${PORT_DEFAUT}, canal par défaut)" owner="SeConnecterAuChat" source_name="Plusieurs ${utilisateurs} sont connectés au chat (@${ip}:${port}, canal par défaut)">
+<for flavor="IN">
+<iter>
+<kw name="Given L'${utilisateur} est connecté au chat (@${ip}:${port}, canal par défaut)" owner="SeConnecterAuChat" source_name="L'${utilisateur} est connecté au chat (@${ip}:${port}, canal par défaut)">
+<status status="NOT RUN" start="2026-05-03T13:52:32.612442" elapsed="0.000077"/>
+</kw>
+<var name="${utilisateur}"/>
+<status status="NOT RUN" start="2026-05-03T13:52:32.611061" elapsed="0.001529"/>
+</iter>
+<var>${utilisateur}</var>
+<value>@{utilisateurs}</value>
+<status status="NOT RUN" start="2026-05-03T13:52:32.610707" elapsed="0.001961"/>
+</for>
+<status status="PASS" start="2026-05-03T13:52:32.609927" elapsed="0.002878"/>
+</kw>
+<kw name="And L'utilisateur lance le client chat" owner="FelixJava" source_name="l'${utilisateur} lance le client chat">
+<kw name="Start Application" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:32.614896" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:52:32.614999" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:52:32.615181" level="INFO">-javaagent:"C:\Users\helen\Documents\toto\qualite\robot_framework\remoteswinglibrary-2.3.3.jar"=127.0.0.1:60982</msg>
+<msg time="2026-05-03T13:52:32.615244" level="INFO">Java version &gt; 9: True</msg>
+<msg time="2026-05-03T13:52:32.621473" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Felix_Java-0.6.jar</msg>
+<msg time="2026-05-03T13:52:35.349127" level="INFO">connecting to started application at 127.0.0.1:60999</msg>
+<msg time="2026-05-03T13:52:35.349373" level="INFO">waiting for api at 127.0.0.1:60999</msg>
+<msg time="2026-05-03T13:52:35.490699" level="INFO">api is ready</msg>
+<msg time="2026-05-03T13:52:35.490808" level="INFO">connected to started application at 127.0.0.1:60999</msg>
+<msg time="2026-05-03T13:52:35.491534" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<arg>${utilisateur}</arg>
+<arg>java -Duser.language\=fr -Duser.country\=FR -jar SUT/Felix_Java-0.6.jar</arg>
+<arg>stdout=/dev/null</arg>
+<arg>stderr=/dev/null</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<status status="PASS" start="2026-05-03T13:52:32.613983" elapsed="2.877696"/>
+</kw>
+<kw name="Set Jemmy Timeouts" owner="RemoteSwingLibrary">
+<arg>2</arg>
+<doc>Sets all relevant jemmy timeouts. 
+By default they are all set to 5 seconds.</doc>
+<status status="PASS" start="2026-05-03T13:52:35.492195" elapsed="0.523529"/>
+</kw>
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.016110" elapsed="0.000261"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:32.613303" elapsed="3.403168"/>
+</kw>
+<kw name="When L'utilisateur modifie l'adresse ${IP_DEFAUT}" owner="FelixJava" source_name="l'${utilisateur} modifie l'adresse ${ip}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.017848" elapsed="0.000262"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.018456" elapsed="0.058071"/>
+</kw>
+<kw name="Focus To Component" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.077843" elapsed="0.039323"/>
+</kw>
+<kw name="Clear Text Field" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Clears contents of text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:36.117720" elapsed="0.060634"/>
+</kw>
+<kw name="Type Into Text Field" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<arg>${ip}</arg>
+<doc>Types text into a text component (e.g. text field, password field, text area).
+Same as `Insert Into Textfield` but sends real key events when setting text field contents.
+Useful if application expects real keyboard events instead of only setting the text of the textfield.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.178876" elapsed="0.029137"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:36.017131" elapsed="0.191274"/>
+</kw>
+<kw name="And L'utilisateur modifie le numéro du ${PORT_DEFAUT}" owner="FelixJava" source_name="l'${utilisateur} modifie le numéro du ${port}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.209995" elapsed="0.000321"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.210689" elapsed="0.008652"/>
+</kw>
+<kw name="Focus To Component" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.220556" elapsed="0.011786"/>
+</kw>
+<kw name="Clear Text Field" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<doc>Clears contents of text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:36.232905" elapsed="0.036950"/>
+</kw>
+<kw name="Type Into Text Field" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<arg>${port}</arg>
+<doc>Types text into a text component (e.g. text field, password field, text area).
+Same as `Insert Into Textfield` but sends real key events when setting text field contents.
+Useful if application expects real keyboard events instead of only setting the text of the textfield.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.270425" elapsed="0.029682"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:36.209100" elapsed="0.091262"/>
+</kw>
+<kw name="And L'utilisateur demande à se connecter" owner="FelixJava" source_name="l'${utilisateur} demande à se connecter">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.301798" elapsed="0.000335"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.302621" elapsed="0.008295"/>
+</kw>
+<kw name="Click On Component" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Clicks on a component, optionally using click count, a specific mouse button and keyboard modifiers.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.311513" elapsed="0.041665"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:36.301263" elapsed="0.052237"/>
+</kw>
+<kw name="Then Un message informe l'utilisateur qu'une connexion est initiée à l'adresse ${IP_DEFAUT} et au ${PORT_DEFAUT} mentionnés" owner="FelixJava" source_name="Un message informe l'${utilisateur} qu'une connexion est initiée à l'adresse ${ip} et au ${port} mentionnés">
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2026-05-03T13:52:36.355833" level="INFO">${port_nombre} = 12345</msg>
+<var>${port_nombre}</var>
+<arg>${port}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.355165" elapsed="0.000736"/>
+</kw>
+<kw name="Format String" owner="String">
+<msg time="2026-05-03T13:52:36.357028" level="INFO">${message_attendu} = Connexion au chat @127.0.0.1:12345</msg>
+<var>${message_attendu}</var>
+<arg>${MESSAGE_INFORMATION_CONNEXION_IP_PORT}</arg>
+<arg>ip=${ip}</arg>
+<arg>port=${port_nombre}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.356324" elapsed="0.000767"/>
+</kw>
+<kw name="L'${utilisateur} Est Informé ${message_attendu}" owner="FelixJava" source_name="l'${utilisateur} est informé ${message_attendu}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.359012" elapsed="0.000269"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.359639" elapsed="0.006597"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:36.381996" level="INFO">${message} = Connexion au chat @127.0.0.1:12345</msg>
+<var>${message}</var>
+<arg>information</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:36.366684" elapsed="0.015507"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${message_attendu}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.382531" elapsed="0.000506"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:52:36.358254" elapsed="0.024859"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:36.354597" elapsed="0.028575"/>
+</kw>
+<kw name="And La vue connexion de l'utilisateur est fermée" owner="FelixJava">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="La vue connexion de l'utilisateur est fermée (sans délai)" owner="FelixJava">
+<kw name="Window Should Not Be Open" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:36.399069" level="FAIL">Window 'Connexion' is open</msg>
+<arg>Connexion</arg>
+<doc>Fails if the window is open.
+| `Window Should Not Be Open` | window |</doc>
+<status status="FAIL" start="2026-05-03T13:52:36.385167" elapsed="0.014048">Window 'Connexion' is open</status>
+</kw>
+<tag>robot:private</tag>
+<status status="FAIL" start="2026-05-03T13:52:36.384559" elapsed="0.015056">Window 'Connexion' is open</status>
+</kw>
+<kw name="La vue connexion de l'utilisateur est fermée (sans délai)" owner="FelixJava">
+<kw name="Window Should Not Be Open" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Fails if the window is open.
+| `Window Should Not Be Open` | window |</doc>
+<status status="PASS" start="2026-05-03T13:52:38.401619" elapsed="2.022935"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:52:38.400659" elapsed="2.024232"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>La vue connexion de l'utilisateur est fermée (sans délai)</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-03T13:52:36.384019" elapsed="4.041279"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:36.383580" elapsed="4.041969"/>
+</kw>
+<kw name="And La vue chat de l'utilisateur est affichée" owner="FelixJava" source_name="la vue chat de l'${utilisateur} est affichée">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:40.427393" elapsed="0.000414"/>
+</kw>
+<kw name="Window Should Be Open" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Fails if the window is not open.</doc>
+<status status="PASS" start="2026-05-03T13:52:40.428317" elapsed="0.009091"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:40.438471" elapsed="0.009583"/>
+</kw>
+<kw name="Component Should Be Visible" owner="RemoteSwingLibrary">
+<arg>saisie</arg>
+<doc>Checks that component is visible.
+*N.B.* Regular expression can be used to select the dialog by prefixing the identifier with ``regexp=``.
+See more details in `[#Regular expressions|Regular expressions]` section.</doc>
+<status status="PASS" start="2026-05-03T13:52:40.449118" elapsed="0.015593"/>
+</kw>
+<kw name="Component Should Be Visible" owner="RemoteSwingLibrary">
+<arg>messages</arg>
+<doc>Checks that component is visible.
+*N.B.* Regular expression can be used to select the dialog by prefixing the identifier with ``regexp=``.
+See more details in `[#Regular expressions|Regular expressions]` section.</doc>
+<status status="PASS" start="2026-05-03T13:52:40.465823" elapsed="0.010929"/>
+</kw>
+<kw name="le champ saisie est vide" owner="FelixJava">
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:40.478148" elapsed="0.005360"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:40.489005" level="INFO">${saisie} = </msg>
+<var>${saisie}</var>
+<arg>saisie</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:40.483872" elapsed="0.005209"/>
+</kw>
+<kw name="Should Be Empty" owner="BuiltIn">
+<msg time="2026-05-03T13:52:40.490022" level="INFO">Length is 0.</msg>
+<arg>${saisie}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<status status="PASS" start="2026-05-03T13:52:40.489447" elapsed="0.000632"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:52:40.477367" elapsed="0.012817"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn" type="TEARDOWN">
+<arg>'${KEYWORD STATUS}' == 'FAIL'</arg>
+<arg>list windows</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-05-03T13:52:40.490852" elapsed="0.000800"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:40.426362" elapsed="0.065429"/>
+</kw>
+<kw name="And L'utilisateur reçoit un message d'accueil" owner="FelixJava" source_name="l'${utilisateur} reçoit un message d'accueil">
+<kw name="l'${utilisateur} reçoit ${MESSAGE_ACCUEIL}" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="l'${utilisateur} reçoit ${message attendu} (sans délai)" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu} (sans délai)">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:40.498991" elapsed="0.000285"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:40.499828" elapsed="0.005780"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:40.511914" level="INFO">${messages} = 
+* Taper /h pour avoir de l'aide sur les commandes du chat.
+</msg>
+<var>${messages}</var>
+<arg>messages</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:40.506166" elapsed="0.005816"/>
+</kw>
+<kw name="Should End With" owner="BuiltIn">
+<arg>${messages.replace('\n','\\n')}</arg>
+<arg>${message attendu}\\n</arg>
+<doc>Fails if the string ``str1`` does not end with the string ``str2``.</doc>
+<status status="PASS" start="2026-05-03T13:52:40.512318" elapsed="0.001480"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:52:40.498263" elapsed="0.015697"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>l'${utilisateur} reçoit ${message attendu} (sans délai)</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-03T13:52:40.494611" elapsed="0.019460"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:52:40.493758" elapsed="0.020416"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:40.492312" elapsed="0.021940"/>
+</kw>
+<kw name="And Tous les ${autres utilisateurs} reçoivent un message d'arrivée du nouvel utilisateur" owner="FelixJava" source_name="tous les ${utilisateurs} reçoivent un message d'arrivée du nouvel utilisateur">
+<for flavor="IN">
+<iter>
+<kw name="l'${utilisateur} reçoit ${MESSAGE_ARRIVEE}" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu}">
+<tag>robot:private</tag>
+<status status="NOT RUN" start="2026-05-03T13:52:40.517884" elapsed="0.000103"/>
+</kw>
+<var name="${utilisateur}"/>
+<status status="NOT RUN" start="2026-05-03T13:52:40.516533" elapsed="0.001558"/>
+</iter>
+<var>${utilisateur}</var>
+<value>@{utilisateurs}</value>
+<status status="NOT RUN" start="2026-05-03T13:52:40.516122" elapsed="0.002045"/>
+</for>
+<status status="PASS" start="2026-05-03T13:52:40.515102" elapsed="0.003200"/>
+</kw>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="l'utilisateur ferme le client chat" owner="FelixJava" source_name="l'${utilisateur} ferme le client chat">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:40.520563" elapsed="0.000280"/>
+</kw>
+<kw name="System Exit" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:43.242136" level="INFO">Connection died as expected</msg>
+<msg time="2026-05-03T13:52:43.242377" level="INFO">Waiting for process to complete.</msg>
+<doc>Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<status status="PASS" start="2026-05-03T13:52:40.521177" elapsed="2.721417"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:40.519926" elapsed="2.722906"/>
+</kw>
+<kw name="plusieurs ${autres utilisateurs} ferment leur client chat" owner="FelixJava" source_name="plusieurs ${utilisateurs} ferment leur client chat">
+<for flavor="IN">
+<iter>
+<kw name="l'${utilisateur} ferme le client chat" owner="FelixJava" source_name="l'${utilisateur} ferme le client chat">
+<status status="NOT RUN" start="2026-05-03T13:52:43.246585" elapsed="0.000067"/>
+</kw>
+<var name="${utilisateur}"/>
+<status status="NOT RUN" start="2026-05-03T13:52:43.245760" elapsed="0.000965"/>
+</iter>
+<var>${utilisateur}</var>
+<value>@{utilisateurs}</value>
+<status status="NOT RUN" start="2026-05-03T13:52:43.245432" elapsed="0.001366"/>
+</for>
+<status status="PASS" start="2026-05-03T13:52:43.244771" elapsed="0.002160"/>
+</kw>
+<kw name="Le serveur chat est arrêté" owner="CamixJava">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-05-03T13:52:43.469275" level="INFO">${OS} = Windows</msg>
+<var>${OS}</var>
+<arg>platform.system()</arg>
+<arg>platform</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-05-03T13:52:43.248375" elapsed="0.221002"/>
+</kw>
+<if>
+<branch type="IF" condition="'${OS}' == 'Windows'">
+<kw name="Get Process Id" owner="Process">
+<msg time="2026-05-03T13:52:43.470892" level="INFO">${Camix PID} = 15680</msg>
+<var>${Camix PID}</var>
+<arg>Camix</arg>
+<doc>Returns the process ID (pid) of the process as an integer.</doc>
+<status status="PASS" start="2026-05-03T13:52:43.470298" elapsed="0.000652"/>
+</kw>
+<kw name="Run Process" owner="Process">
+<msg time="2026-05-03T13:52:43.471904" level="INFO">Starting process:
+taskkill /F /PID 15680</msg>
+<msg time="2026-05-03T13:52:43.477829" level="INFO">Waiting for process to complete.</msg>
+<msg time="2026-05-03T13:52:43.653663" level="INFO">Process completed.</msg>
+<arg>taskkill</arg>
+<arg>/F</arg>
+<arg>/PID</arg>
+<arg>${Camix PID}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2026-05-03T13:52:43.471297" elapsed="0.182543"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:43.469638" elapsed="0.184308"/>
+</branch>
+<branch type="ELSE">
+<kw name="Terminate Process" owner="Process">
+<arg>Camix</arg>
+<doc>Stops the process gracefully or forcefully.</doc>
+<status status="NOT RUN" start="2026-05-03T13:52:43.654477" elapsed="0.000049"/>
+</kw>
+<status status="NOT RUN" start="2026-05-03T13:52:43.654047" elapsed="0.000547"/>
+</branch>
+<status status="PASS" start="2026-05-03T13:52:43.469554" elapsed="0.185086"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-03T13:52:44.655912" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-03T13:52:43.654929" elapsed="1.001260"/>
+</kw>
+<kw name="Process Should Be Stopped" owner="Process">
+<arg>Camix</arg>
+<arg>Le serveur Camix n'est pas arrêté.</arg>
+<doc>Verifies that the process is not running.</doc>
+<status status="PASS" start="2026-05-03T13:52:44.656806" elapsed="0.000805"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:43.247609" elapsed="1.410197"/>
+</kw>
+<arg>l'utilisateur ferme le client chat</arg>
+<arg>AND</arg>
+<arg>plusieurs ${autres utilisateurs} ferment leur client chat</arg>
+<arg>AND</arg>
+<arg>le serveur chat est arrêté</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-05-03T13:52:40.518793" elapsed="4.139114"/>
+</kw>
+<arg>${0 autres utilisateurs}</arg>
+<status status="PASS" start="2026-05-03T13:52:31.584541" elapsed="13.073503"/>
+</kw>
+<kw name="Se connecter au chat" owner="SeConnecterAuChat">
+<kw name="Given Le serveur chat est accessible @${IP_DEFAUT}:${PORT_DEFAUT}" owner="CamixJava" source_name="le serveur chat est accessible @${ip}:${port}">
+<kw name="Start Process" owner="Process">
+<msg time="2026-05-03T13:52:44.665225" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Camix_Java-0.6.jar</msg>
+<arg>java</arg>
+<arg>-Duser.language\=fr</arg>
+<arg>-Duser.country\=FR</arg>
+<arg>-jar</arg>
+<arg>SUT/Camix_Java-0.6.jar</arg>
+<arg>alias=Camix</arg>
+<doc>Starts a new process on background.</doc>
+<status status="PASS" start="2026-05-03T13:52:44.664328" elapsed="0.015443"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-03T13:52:45.681905" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-03T13:52:44.680602" elapsed="1.001579"/>
+</kw>
+<kw name="Process Should Be Running" owner="Process">
+<arg>Camix</arg>
+<arg>Le serveur Camix n'est pas accessible.</arg>
+<doc>Verifies that the process is running.</doc>
+<status status="PASS" start="2026-05-03T13:52:45.682842" elapsed="0.000780"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-03T13:52:45.684768" level="INFO">TODO: assurer que le serveur Camix est accessible @127.0.0.1:12345</msg>
+<arg>TODO: assurer que le serveur Camix est accessible @${ip}:${port}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-03T13:52:45.684079" elapsed="0.000801"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:44.663205" elapsed="1.021814"/>
+</kw>
+<kw name="And Plusieurs ${autres utilisateurs} sont connectés au chat (@${IP_DEFAUT}:${PORT_DEFAUT}, canal par défaut)" owner="SeConnecterAuChat" source_name="Plusieurs ${utilisateurs} sont connectés au chat (@${ip}:${port}, canal par défaut)">
+<for flavor="IN">
+<iter>
+<kw name="Given L'${utilisateur} est connecté au chat (@${ip}:${port}, canal par défaut)" owner="SeConnecterAuChat" source_name="L'${utilisateur} est connecté au chat (@${ip}:${port}, canal par défaut)">
+<kw name="Given L'${utilisateur} lance le client chat" owner="FelixJava" source_name="l'${utilisateur} lance le client chat">
+<kw name="Start Application" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:45.692307" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:52:45.692443" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:52:45.692599" level="INFO">-javaagent:"C:\Users\helen\Documents\toto\qualite\robot_framework\remoteswinglibrary-2.3.3.jar"=127.0.0.1:60982</msg>
+<msg time="2026-05-03T13:52:45.692660" level="INFO">Java version &gt; 9: True</msg>
+<msg time="2026-05-03T13:52:45.698726" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Felix_Java-0.6.jar</msg>
+<msg time="2026-05-03T13:52:48.408810" level="INFO">connecting to started application at 127.0.0.1:61028</msg>
+<msg time="2026-05-03T13:52:48.408939" level="INFO">waiting for api at 127.0.0.1:61028</msg>
+<msg time="2026-05-03T13:52:48.551653" level="INFO">api is ready</msg>
+<msg time="2026-05-03T13:52:48.551772" level="INFO">connected to started application at 127.0.0.1:61028</msg>
+<msg time="2026-05-03T13:52:48.552322" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<arg>${utilisateur}</arg>
+<arg>java -Duser.language\=fr -Duser.country\=FR -jar SUT/Felix_Java-0.6.jar</arg>
+<arg>stdout=/dev/null</arg>
+<arg>stderr=/dev/null</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<status status="PASS" start="2026-05-03T13:52:45.691511" elapsed="2.860907"/>
+</kw>
+<kw name="Set Jemmy Timeouts" owner="RemoteSwingLibrary">
+<arg>2</arg>
+<doc>Sets all relevant jemmy timeouts. 
+By default they are all set to 5 seconds.</doc>
+<status status="PASS" start="2026-05-03T13:52:48.552972" elapsed="0.523923"/>
+</kw>
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:49.077297" elapsed="0.000248"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:45.690701" elapsed="3.386919"/>
+</kw>
+<kw name="When L'${utilisateur} modifie l'adresse ${ip}" owner="FelixJava" source_name="l'${utilisateur} modifie l'adresse ${ip}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:49.079291" elapsed="0.000239"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:49.079854" elapsed="0.051723"/>
+</kw>
+<kw name="Focus To Component" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" start="2026-05-03T13:52:49.132305" elapsed="0.037451"/>
+</kw>
+<kw name="Clear Text Field" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Clears contents of text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:49.170293" elapsed="0.055909"/>
+</kw>
+<kw name="Type Into Text Field" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<arg>${ip}</arg>
+<doc>Types text into a text component (e.g. text field, password field, text area).
+Same as `Insert Into Textfield` but sends real key events when setting text field contents.
+Useful if application expects real keyboard events instead of only setting the text of the textfield.</doc>
+<status status="PASS" start="2026-05-03T13:52:49.226620" elapsed="0.030947"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:49.078571" elapsed="0.179391"/>
+</kw>
+<kw name="And L'${utilisateur} modifie le numéro du ${port}" owner="FelixJava" source_name="l'${utilisateur} modifie le numéro du ${port}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:49.259600" elapsed="0.000319"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:49.260309" elapsed="0.008293"/>
+</kw>
+<kw name="Focus To Component" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" start="2026-05-03T13:52:49.269256" elapsed="0.013350"/>
+</kw>
+<kw name="Clear Text Field" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<doc>Clears contents of text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:49.283148" elapsed="0.036198"/>
+</kw>
+<kw name="Type Into Text Field" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<arg>${port}</arg>
+<doc>Types text into a text component (e.g. text field, password field, text area).
+Same as `Insert Into Textfield` but sends real key events when setting text field contents.
+Useful if application expects real keyboard events instead of only setting the text of the textfield.</doc>
+<status status="PASS" start="2026-05-03T13:52:49.319723" elapsed="0.032551"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:49.258667" elapsed="0.093919"/>
+</kw>
+<kw name="And L'${utilisateur} demande à se connecter" owner="FelixJava" source_name="l'${utilisateur} demande à se connecter">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:49.354680" elapsed="0.000515"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:49.355927" elapsed="0.011018"/>
+</kw>
+<kw name="Click On Component" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Clicks on a component, optionally using click count, a specific mouse button and keyboard modifiers.</doc>
+<status status="PASS" start="2026-05-03T13:52:49.368197" elapsed="0.041931"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:49.353643" elapsed="0.056771"/>
+</kw>
+<kw name="And L'${utilisateur} reçoit un message d'accueil" owner="FelixJava" source_name="l'${utilisateur} reçoit un message d'accueil">
+<kw name="l'${utilisateur} reçoit ${MESSAGE_ACCUEIL}" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="l'${utilisateur} reçoit ${message attendu} (sans délai)" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu} (sans délai)">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:49.421831" elapsed="0.000360"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:49.422593" elapsed="0.657499"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:50.103448" level="INFO">${messages} = 
+* Taper /h pour avoir de l'aide sur les commandes du chat.
+</msg>
+<var>${messages}</var>
+<arg>messages</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:50.081178" elapsed="0.022495"/>
+</kw>
+<kw name="Should End With" owner="BuiltIn">
+<arg>${messages.replace('\n','\\n')}</arg>
+<arg>${message attendu}\\n</arg>
+<doc>Fails if the string ``str1`` does not end with the string ``str2``.</doc>
+<status status="PASS" start="2026-05-03T13:52:50.104311" elapsed="0.004713"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:52:49.420917" elapsed="0.688339"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>l'${utilisateur} reçoit ${message attendu} (sans délai)</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-03T13:52:49.415796" elapsed="0.693551"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:52:49.414165" elapsed="0.695309"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:49.411915" elapsed="0.697638"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:45.689277" elapsed="4.420345"/>
+</kw>
+<var name="${utilisateur}">premier</var>
+<status status="PASS" start="2026-05-03T13:52:45.687800" elapsed="4.421875"/>
+</iter>
+<iter>
+<kw name="Given L'${utilisateur} est connecté au chat (@${ip}:${port}, canal par défaut)" owner="SeConnecterAuChat" source_name="L'${utilisateur} est connecté au chat (@${ip}:${port}, canal par défaut)">
+<kw name="Given L'${utilisateur} lance le client chat" owner="FelixJava" source_name="l'${utilisateur} lance le client chat">
+<kw name="Start Application" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:50.114426" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:52:50.114590" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:52:50.114778" level="INFO">-javaagent:"C:\Users\helen\Documents\toto\qualite\robot_framework\remoteswinglibrary-2.3.3.jar"=127.0.0.1:60982</msg>
+<msg time="2026-05-03T13:52:50.114865" level="INFO">Java version &gt; 9: True</msg>
+<msg time="2026-05-03T13:52:50.124084" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Felix_Java-0.6.jar</msg>
+<msg time="2026-05-03T13:52:52.883273" level="INFO">connecting to started application at 127.0.0.1:61045</msg>
+<msg time="2026-05-03T13:52:52.883391" level="INFO">waiting for api at 127.0.0.1:61045</msg>
+<msg time="2026-05-03T13:52:53.005940" level="INFO">api is ready</msg>
+<msg time="2026-05-03T13:52:53.006035" level="INFO">connected to started application at 127.0.0.1:61045</msg>
+<msg time="2026-05-03T13:52:53.006630" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<arg>${utilisateur}</arg>
+<arg>java -Duser.language\=fr -Duser.country\=FR -jar SUT/Felix_Java-0.6.jar</arg>
+<arg>stdout=/dev/null</arg>
+<arg>stderr=/dev/null</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<status status="PASS" start="2026-05-03T13:52:50.113600" elapsed="2.893271"/>
+</kw>
+<kw name="Set Jemmy Timeouts" owner="RemoteSwingLibrary">
+<arg>2</arg>
+<doc>Sets all relevant jemmy timeouts. 
+By default they are all set to 5 seconds.</doc>
+<status status="PASS" start="2026-05-03T13:52:53.007342" elapsed="0.517755"/>
+</kw>
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:53.525558" elapsed="0.000513"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:50.112756" elapsed="3.413554"/>
+</kw>
+<kw name="When L'${utilisateur} modifie l'adresse ${ip}" owner="FelixJava" source_name="l'${utilisateur} modifie l'adresse ${ip}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:53.528061" elapsed="0.000255"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:53.528607" elapsed="0.058319"/>
+</kw>
+<kw name="Focus To Component" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" start="2026-05-03T13:52:53.587999" elapsed="0.037845"/>
+</kw>
+<kw name="Clear Text Field" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Clears contents of text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:53.626244" elapsed="0.068688"/>
+</kw>
+<kw name="Type Into Text Field" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<arg>${ip}</arg>
+<doc>Types text into a text component (e.g. text field, password field, text area).
+Same as `Insert Into Textfield` but sends real key events when setting text field contents.
+Useful if application expects real keyboard events instead of only setting the text of the textfield.</doc>
+<status status="PASS" start="2026-05-03T13:52:53.695413" elapsed="0.031711"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:53.527330" elapsed="0.200120"/>
+</kw>
+<kw name="And L'${utilisateur} modifie le numéro du ${port}" owner="FelixJava" source_name="l'${utilisateur} modifie le numéro du ${port}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:53.731235" elapsed="0.000358"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:53.731986" elapsed="0.010091"/>
+</kw>
+<kw name="Focus To Component" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" start="2026-05-03T13:52:53.743014" elapsed="0.016257"/>
+</kw>
+<kw name="Clear Text Field" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<doc>Clears contents of text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:53.760534" elapsed="0.029945"/>
+</kw>
+<kw name="Type Into Text Field" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<arg>${port}</arg>
+<doc>Types text into a text component (e.g. text field, password field, text area).
+Same as `Insert Into Textfield` but sends real key events when setting text field contents.
+Useful if application expects real keyboard events instead of only setting the text of the textfield.</doc>
+<status status="PASS" start="2026-05-03T13:52:53.790923" elapsed="0.031878"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:53.729794" elapsed="0.093312"/>
+</kw>
+<kw name="And L'${utilisateur} demande à se connecter" owner="FelixJava" source_name="l'${utilisateur} demande à se connecter">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:53.825145" elapsed="0.000335"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:53.825881" elapsed="0.013542"/>
+</kw>
+<kw name="Click On Component" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Clicks on a component, optionally using click count, a specific mouse button and keyboard modifiers.</doc>
+<status status="PASS" start="2026-05-03T13:52:53.841443" elapsed="0.047410"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:53.824315" elapsed="0.064935"/>
+</kw>
+<kw name="And L'${utilisateur} reçoit un message d'accueil" owner="FelixJava" source_name="l'${utilisateur} reçoit un message d'accueil">
+<kw name="l'${utilisateur} reçoit ${MESSAGE_ACCUEIL}" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="l'${utilisateur} reçoit ${message attendu} (sans délai)" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu} (sans délai)">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:53.896449" elapsed="0.000404"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:53.897298" elapsed="0.682412"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:54.597196" level="INFO">${messages} = 
+* Taper /h pour avoir de l'aide sur les commandes du chat.
+</msg>
+<var>${messages}</var>
+<arg>messages</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:54.580615" elapsed="0.016703"/>
+</kw>
+<kw name="Should End With" owner="BuiltIn">
+<arg>${messages.replace('\n','\\n')}</arg>
+<arg>${message attendu}\\n</arg>
+<doc>Fails if the string ``str1`` does not end with the string ``str2``.</doc>
+<status status="PASS" start="2026-05-03T13:52:54.598090" elapsed="0.001746"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:52:53.895564" elapsed="0.704495"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>l'${utilisateur} reçoit ${message attendu} (sans délai)</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-03T13:52:53.892073" elapsed="0.708112"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:52:53.891194" elapsed="0.709194"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:53.890158" elapsed="0.710416"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:50.112048" elapsed="4.488649"/>
+</kw>
+<var name="${utilisateur}">deuxième</var>
+<status status="PASS" start="2026-05-03T13:52:50.110257" elapsed="4.490494"/>
+</iter>
+<var>${utilisateur}</var>
+<value>@{utilisateurs}</value>
+<status status="PASS" start="2026-05-03T13:52:45.687386" elapsed="8.913450"/>
+</for>
+<status status="PASS" start="2026-05-03T13:52:45.686607" elapsed="8.914358"/>
+</kw>
+<kw name="And L'utilisateur lance le client chat" owner="FelixJava" source_name="l'${utilisateur} lance le client chat">
+<kw name="Start Application" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:54.602972" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:52:54.603070" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:52:54.603220" level="INFO">-javaagent:"C:\Users\helen\Documents\toto\qualite\robot_framework\remoteswinglibrary-2.3.3.jar"=127.0.0.1:60982</msg>
+<msg time="2026-05-03T13:52:54.603322" level="INFO">Java version &gt; 9: True</msg>
+<msg time="2026-05-03T13:52:54.610714" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Felix_Java-0.6.jar</msg>
+<msg time="2026-05-03T13:52:57.322754" level="INFO">connecting to started application at 127.0.0.1:61062</msg>
+<msg time="2026-05-03T13:52:57.323220" level="INFO">waiting for api at 127.0.0.1:61062</msg>
+<msg time="2026-05-03T13:52:57.460630" level="INFO">api is ready</msg>
+<msg time="2026-05-03T13:52:57.460771" level="INFO">connected to started application at 127.0.0.1:61062</msg>
+<msg time="2026-05-03T13:52:57.461512" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<arg>${utilisateur}</arg>
+<arg>java -Duser.language\=fr -Duser.country\=FR -jar SUT/Felix_Java-0.6.jar</arg>
+<arg>stdout=/dev/null</arg>
+<arg>stderr=/dev/null</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<status status="PASS" start="2026-05-03T13:52:54.602283" elapsed="2.859409"/>
+</kw>
+<kw name="Set Jemmy Timeouts" owner="RemoteSwingLibrary">
+<arg>2</arg>
+<doc>Sets all relevant jemmy timeouts. 
+By default they are all set to 5 seconds.</doc>
+<status status="PASS" start="2026-05-03T13:52:57.462265" elapsed="0.541072"/>
+</kw>
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.003958" elapsed="0.000333"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:54.601550" elapsed="3.402865"/>
+</kw>
+<kw name="When L'utilisateur modifie l'adresse ${IP_DEFAUT}" owner="FelixJava" source_name="l'${utilisateur} modifie l'adresse ${ip}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.005665" elapsed="0.000210"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.006115" elapsed="0.050361"/>
+</kw>
+<kw name="Focus To Component" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.057277" elapsed="0.037869"/>
+</kw>
+<kw name="Clear Text Field" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Clears contents of text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:58.095557" elapsed="0.059440"/>
+</kw>
+<kw name="Type Into Text Field" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<arg>${ip}</arg>
+<doc>Types text into a text component (e.g. text field, password field, text area).
+Same as `Insert Into Textfield` but sends real key events when setting text field contents.
+Useful if application expects real keyboard events instead of only setting the text of the textfield.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.155506" elapsed="0.031792"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:58.005122" elapsed="0.182414"/>
+</kw>
+<kw name="And L'utilisateur modifie le numéro du ${PORT_DEFAUT}" owner="FelixJava" source_name="l'${utilisateur} modifie le numéro du ${port}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.188931" elapsed="0.000493"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.189945" elapsed="0.008912"/>
+</kw>
+<kw name="Focus To Component" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.199629" elapsed="0.013388"/>
+</kw>
+<kw name="Clear Text Field" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<doc>Clears contents of text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:58.213873" elapsed="0.035432"/>
+</kw>
+<kw name="Type Into Text Field" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<arg>${port}</arg>
+<doc>Types text into a text component (e.g. text field, password field, text area).
+Same as `Insert Into Textfield` but sends real key events when setting text field contents.
+Useful if application expects real keyboard events instead of only setting the text of the textfield.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.249730" elapsed="0.029490"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:58.188215" elapsed="0.091320"/>
+</kw>
+<kw name="And L'utilisateur demande à se connecter" owner="FelixJava" source_name="l'${utilisateur} demande à se connecter">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.280288" elapsed="0.000439"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.281124" elapsed="0.006884"/>
+</kw>
+<kw name="Click On Component" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Clicks on a component, optionally using click count, a specific mouse button and keyboard modifiers.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.288954" elapsed="0.039151"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:58.279903" elapsed="0.048412"/>
+</kw>
+<kw name="Then Un message informe l'utilisateur qu'une connexion est initiée à l'adresse ${IP_DEFAUT} et au ${PORT_DEFAUT} mentionnés" owner="FelixJava" source_name="Un message informe l'${utilisateur} qu'une connexion est initiée à l'adresse ${ip} et au ${port} mentionnés">
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2026-05-03T13:52:58.331285" level="INFO">${port_nombre} = 12345</msg>
+<var>${port_nombre}</var>
+<arg>${port}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.330295" elapsed="0.001080"/>
+</kw>
+<kw name="Format String" owner="String">
+<msg time="2026-05-03T13:52:58.332672" level="INFO">${message_attendu} = Connexion au chat @127.0.0.1:12345</msg>
+<var>${message_attendu}</var>
+<arg>${MESSAGE_INFORMATION_CONNEXION_IP_PORT}</arg>
+<arg>ip=${ip}</arg>
+<arg>port=${port_nombre}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.331846" elapsed="0.000915"/>
+</kw>
+<kw name="L'${utilisateur} Est Informé ${message_attendu}" owner="FelixJava" source_name="l'${utilisateur} est informé ${message_attendu}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.335286" elapsed="0.000332"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.336102" elapsed="0.008655"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:58.356696" level="INFO">${message} = Connexion au chat @127.0.0.1:12345</msg>
+<var>${message}</var>
+<arg>information</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:52:58.345238" elapsed="0.011604"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${message_attendu}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.357308" elapsed="0.000924"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:52:58.334301" elapsed="0.024050"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:58.329215" elapsed="0.029231"/>
+</kw>
+<kw name="And La vue connexion de l'utilisateur est fermée" owner="FelixJava">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="La vue connexion de l'utilisateur est fermée (sans délai)" owner="FelixJava">
+<kw name="Window Should Not Be Open" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:52:58.377435" level="FAIL">Window 'Connexion' is open</msg>
+<arg>Connexion</arg>
+<doc>Fails if the window is open.
+| `Window Should Not Be Open` | window |</doc>
+<status status="FAIL" start="2026-05-03T13:52:58.360426" elapsed="0.017101">Window 'Connexion' is open</status>
+</kw>
+<tag>robot:private</tag>
+<status status="FAIL" start="2026-05-03T13:52:58.359962" elapsed="0.017802">Window 'Connexion' is open</status>
+</kw>
+<kw name="La vue connexion de l'utilisateur est fermée (sans délai)" owner="FelixJava">
+<kw name="Window Should Not Be Open" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Fails if the window is open.
+| `Window Should Not Be Open` | window |</doc>
+<status status="PASS" start="2026-05-03T13:53:00.379701" elapsed="2.023999"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:00.378765" elapsed="2.025310"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>La vue connexion de l'utilisateur est fermée (sans délai)</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-03T13:52:58.359250" elapsed="4.045216"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:58.358748" elapsed="4.045908"/>
+</kw>
+<kw name="And La vue chat de l'utilisateur est affichée" owner="FelixJava" source_name="la vue chat de l'${utilisateur} est affichée">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.406277" elapsed="0.000366"/>
+</kw>
+<kw name="Window Should Be Open" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Fails if the window is not open.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.407102" elapsed="0.008470"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.416346" elapsed="0.010609"/>
+</kw>
+<kw name="Component Should Be Visible" owner="RemoteSwingLibrary">
+<arg>saisie</arg>
+<doc>Checks that component is visible.
+*N.B.* Regular expression can be used to select the dialog by prefixing the identifier with ``regexp=``.
+See more details in `[#Regular expressions|Regular expressions]` section.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.428099" elapsed="0.016945"/>
+</kw>
+<kw name="Component Should Be Visible" owner="RemoteSwingLibrary">
+<arg>messages</arg>
+<doc>Checks that component is visible.
+*N.B.* Regular expression can be used to select the dialog by prefixing the identifier with ``regexp=``.
+See more details in `[#Regular expressions|Regular expressions]` section.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.446123" elapsed="0.011719"/>
+</kw>
+<kw name="le champ saisie est vide" owner="FelixJava">
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.459349" elapsed="0.007483"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:02.472348" level="INFO">${saisie} = </msg>
+<var>${saisie}</var>
+<arg>saisie</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:02.467368" elapsed="0.005057"/>
+</kw>
+<kw name="Should Be Empty" owner="BuiltIn">
+<msg time="2026-05-03T13:53:02.473121" level="INFO">Length is 0.</msg>
+<arg>${saisie}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.472680" elapsed="0.000495"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:02.458617" elapsed="0.014626"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn" type="TEARDOWN">
+<arg>'${KEYWORD STATUS}' == 'FAIL'</arg>
+<arg>list windows</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.473507" elapsed="0.000510"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:02.405407" elapsed="0.068758"/>
+</kw>
+<kw name="And L'utilisateur reçoit un message d'accueil" owner="FelixJava" source_name="l'${utilisateur} reçoit un message d'accueil">
+<kw name="l'${utilisateur} reçoit ${MESSAGE_ACCUEIL}" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="l'${utilisateur} reçoit ${message attendu} (sans délai)" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu} (sans délai)">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.481169" elapsed="0.000277"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.481805" elapsed="0.005587"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:02.493824" level="INFO">${messages} = 
+* Taper /h pour avoir de l'aide sur les commandes du chat.
+</msg>
+<var>${messages}</var>
+<arg>messages</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:02.488047" elapsed="0.005860"/>
+</kw>
+<kw name="Should End With" owner="BuiltIn">
+<arg>${messages.replace('\n','\\n')}</arg>
+<arg>${message attendu}\\n</arg>
+<doc>Fails if the string ``str1`` does not end with the string ``str2``.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.494332" elapsed="0.001208"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:02.480410" elapsed="0.015255"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>l'${utilisateur} reçoit ${message attendu} (sans délai)</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.476860" elapsed="0.018883"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:02.476084" elapsed="0.019751"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:02.474683" elapsed="0.021201"/>
+</kw>
+<kw name="And Tous les ${autres utilisateurs} reçoivent un message d'arrivée du nouvel utilisateur" owner="FelixJava" source_name="tous les ${utilisateurs} reçoivent un message d'arrivée du nouvel utilisateur">
+<for flavor="IN">
+<iter>
+<kw name="l'${utilisateur} reçoit ${MESSAGE_ARRIVEE}" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="l'${utilisateur} reçoit ${message attendu} (sans délai)" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu} (sans délai)">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.502411" elapsed="0.000312"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.503139" elapsed="0.010433"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:02.525136" level="INFO">${messages} = 
+* Taper /h pour avoir de l'aide sur les commandes du chat.
+
+* Un nouvel utilisateur est dans le chat (place publique).
+
+* Un nouvel utilisateur est dans le chat (place publique).
+</msg>
+<var>${messages}</var>
+<arg>messages</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:02.514308" elapsed="0.010965"/>
+</kw>
+<kw name="Should End With" owner="BuiltIn">
+<arg>${messages.replace('\n','\\n')}</arg>
+<arg>${message attendu}\\n</arg>
+<doc>Fails if the string ``str1`` does not end with the string ``str2``.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.525951" elapsed="0.001891"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:02.501615" elapsed="0.026370"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>l'${utilisateur} reçoit ${message attendu} (sans délai)</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.498489" elapsed="0.029556"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:02.497746" elapsed="0.030574"/>
+</kw>
+<var name="${utilisateur}">premier</var>
+<status status="PASS" start="2026-05-03T13:53:02.496788" elapsed="0.031641"/>
+</iter>
+<iter>
+<kw name="l'${utilisateur} reçoit ${MESSAGE_ARRIVEE}" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="l'${utilisateur} reçoit ${message attendu} (sans délai)" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu} (sans délai)">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.534935" elapsed="0.000284"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.535580" elapsed="0.011451"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:02.559286" level="INFO">${messages} = 
+* Taper /h pour avoir de l'aide sur les commandes du chat.
+
+* Un nouvel utilisateur est dans le chat (place publique).
+</msg>
+<var>${messages}</var>
+<arg>messages</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:02.548360" elapsed="0.011102"/>
+</kw>
+<kw name="Should End With" owner="BuiltIn">
+<arg>${messages.replace('\n','\\n')}</arg>
+<arg>${message attendu}\\n</arg>
+<doc>Fails if the string ``str1`` does not end with the string ``str2``.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.560192" elapsed="0.002728"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:02.534119" elapsed="0.029068"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>l'${utilisateur} reçoit ${message attendu} (sans délai)</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.531414" elapsed="0.031950"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:02.530482" elapsed="0.033086"/>
+</kw>
+<var name="${utilisateur}">deuxième</var>
+<status status="PASS" start="2026-05-03T13:53:02.528738" elapsed="0.034946"/>
+</iter>
+<var>${utilisateur}</var>
+<value>@{utilisateurs}</value>
+<status status="PASS" start="2026-05-03T13:53:02.496624" elapsed="0.067319"/>
+</for>
+<status status="PASS" start="2026-05-03T13:53:02.496330" elapsed="0.067973"/>
+</kw>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="l'utilisateur ferme le client chat" owner="FelixJava" source_name="l'${utilisateur} ferme le client chat">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.568437" elapsed="0.000439"/>
+</kw>
+<kw name="System Exit" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:05.279937" level="INFO">Connection died as expected</msg>
+<msg time="2026-05-03T13:53:05.280130" level="INFO">Waiting for process to complete.</msg>
+<doc>Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.569489" elapsed="2.710826"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:02.567304" elapsed="2.713196"/>
+</kw>
+<kw name="plusieurs ${autres utilisateurs} ferment leur client chat" owner="FelixJava" source_name="plusieurs ${utilisateurs} ferment leur client chat">
+<for flavor="IN">
+<iter>
+<kw name="l'${utilisateur} ferme le client chat" owner="FelixJava" source_name="l'${utilisateur} ferme le client chat">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:05.285227" elapsed="0.000345"/>
+</kw>
+<kw name="System Exit" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:08.010242" level="INFO">Connection died as expected</msg>
+<msg time="2026-05-03T13:53:08.010495" level="INFO">Waiting for process to complete.</msg>
+<doc>Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<status status="PASS" start="2026-05-03T13:53:05.285981" elapsed="2.724706"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:05.284343" elapsed="2.726554"/>
+</kw>
+<var name="${utilisateur}">premier</var>
+<status status="PASS" start="2026-05-03T13:53:05.283488" elapsed="2.727488"/>
+</iter>
+<iter>
+<kw name="l'${utilisateur} ferme le client chat" owner="FelixJava" source_name="l'${utilisateur} ferme le client chat">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:08.013655" elapsed="0.000404"/>
+</kw>
+<kw name="System Exit" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:10.741018" level="INFO">Connection died as expected</msg>
+<msg time="2026-05-03T13:53:10.741274" level="INFO">Waiting for process to complete.</msg>
+<doc>Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<status status="PASS" start="2026-05-03T13:53:08.014631" elapsed="2.726815"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:08.012529" elapsed="2.729177"/>
+</kw>
+<var name="${utilisateur}">deuxième</var>
+<status status="PASS" start="2026-05-03T13:53:08.011366" elapsed="2.730411"/>
+</iter>
+<var>${utilisateur}</var>
+<value>@{utilisateurs}</value>
+<status status="PASS" start="2026-05-03T13:53:05.283119" elapsed="5.458754"/>
+</for>
+<status status="PASS" start="2026-05-03T13:53:05.282465" elapsed="5.459590"/>
+</kw>
+<kw name="Le serveur chat est arrêté" owner="CamixJava">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-05-03T13:53:10.744845" level="INFO">${OS} = Windows</msg>
+<var>${OS}</var>
+<arg>platform.system()</arg>
+<arg>platform</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-05-03T13:53:10.743789" elapsed="0.001130"/>
+</kw>
+<if>
+<branch type="IF" condition="'${OS}' == 'Windows'">
+<kw name="Get Process Id" owner="Process">
+<msg time="2026-05-03T13:53:10.746495" level="INFO">${Camix PID} = 3100</msg>
+<var>${Camix PID}</var>
+<arg>Camix</arg>
+<doc>Returns the process ID (pid) of the process as an integer.</doc>
+<status status="PASS" start="2026-05-03T13:53:10.745810" elapsed="0.000755"/>
+</kw>
+<kw name="Run Process" owner="Process">
+<msg time="2026-05-03T13:53:10.749101" level="INFO">Starting process:
+taskkill /F /PID 3100</msg>
+<msg time="2026-05-03T13:53:10.755880" level="INFO">Waiting for process to complete.</msg>
+<msg time="2026-05-03T13:53:10.932734" level="INFO">Process completed.</msg>
+<arg>taskkill</arg>
+<arg>/F</arg>
+<arg>/PID</arg>
+<arg>${Camix PID}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2026-05-03T13:53:10.746985" elapsed="0.185920"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:10.745148" elapsed="0.187867"/>
+</branch>
+<branch type="ELSE">
+<kw name="Terminate Process" owner="Process">
+<arg>Camix</arg>
+<doc>Stops the process gracefully or forcefully.</doc>
+<status status="NOT RUN" start="2026-05-03T13:53:10.933470" elapsed="0.000046"/>
+</kw>
+<status status="NOT RUN" start="2026-05-03T13:53:10.933080" elapsed="0.000502"/>
+</branch>
+<status status="PASS" start="2026-05-03T13:53:10.745083" elapsed="0.188579"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-03T13:53:11.934974" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-03T13:53:10.933949" elapsed="1.001416"/>
+</kw>
+<kw name="Process Should Be Stopped" owner="Process">
+<arg>Camix</arg>
+<arg>Le serveur Camix n'est pas arrêté.</arg>
+<doc>Verifies that the process is not running.</doc>
+<status status="PASS" start="2026-05-03T13:53:11.936240" elapsed="0.000837"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:10.742904" elapsed="1.194365"/>
+</kw>
+<arg>l'utilisateur ferme le client chat</arg>
+<arg>AND</arg>
+<arg>plusieurs ${autres utilisateurs} ferment leur client chat</arg>
+<arg>AND</arg>
+<arg>le serveur chat est arrêté</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-05-03T13:53:02.565508" elapsed="9.371864"/>
+</kw>
+<arg>${2 autres utilisateurs}</arg>
+<status status="PASS" start="2026-05-03T13:52:44.660143" elapsed="27.277381"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:52:31.581910" elapsed="40.356763"/>
+</test>
+<test id="s1-s1-s1-s1-t3" name="AC - Se connecter au chat - IP/port défaut" line="43">
+<kw name="Se connecter au chat - IP/port défaut" owner="SeConnecterAuChat">
+<kw name="Given Le serveur chat est accessible @${IP_DEFAUT}:${PORT_DEFAUT}" owner="CamixJava" source_name="le serveur chat est accessible @${ip}:${port}">
+<kw name="Start Process" owner="Process">
+<msg time="2026-05-03T13:53:11.947960" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Camix_Java-0.6.jar</msg>
+<arg>java</arg>
+<arg>-Duser.language\=fr</arg>
+<arg>-Duser.country\=FR</arg>
+<arg>-jar</arg>
+<arg>SUT/Camix_Java-0.6.jar</arg>
+<arg>alias=Camix</arg>
+<doc>Starts a new process on background.</doc>
+<status status="PASS" start="2026-05-03T13:53:11.947068" elapsed="0.014253"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-03T13:53:12.963524" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-03T13:53:11.962156" elapsed="1.001655"/>
+</kw>
+<kw name="Process Should Be Running" owner="Process">
+<arg>Camix</arg>
+<arg>Le serveur Camix n'est pas accessible.</arg>
+<doc>Verifies that the process is running.</doc>
+<status status="PASS" start="2026-05-03T13:53:12.964576" elapsed="0.000854"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-03T13:53:12.966670" level="INFO">TODO: assurer que le serveur Camix est accessible @127.0.0.1:12345</msg>
+<arg>TODO: assurer que le serveur Camix est accessible @${ip}:${port}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-03T13:53:12.965984" elapsed="0.000812"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:11.946179" elapsed="1.020763"/>
+</kw>
+<kw name="And Plusieurs ${autres utilisateurs} sont connectés au chat (@${IP_DEFAUT}:${PORT_DEFAUT}, canal par défaut)" owner="SeConnecterAuChat" source_name="Plusieurs ${utilisateurs} sont connectés au chat (@${ip}:${port}, canal par défaut)">
+<for flavor="IN">
+<iter>
+<kw name="Given L'${utilisateur} est connecté au chat (@${ip}:${port}, canal par défaut)" owner="SeConnecterAuChat" source_name="L'${utilisateur} est connecté au chat (@${ip}:${port}, canal par défaut)">
+<status status="NOT RUN" start="2026-05-03T13:53:12.971122" elapsed="0.000076"/>
+</kw>
+<var name="${utilisateur}"/>
+<status status="NOT RUN" start="2026-05-03T13:53:12.969629" elapsed="0.001644"/>
+</iter>
+<var>${utilisateur}</var>
+<value>@{utilisateurs}</value>
+<status status="NOT RUN" start="2026-05-03T13:53:12.969342" elapsed="0.002006"/>
+</for>
+<status status="PASS" start="2026-05-03T13:53:12.968616" elapsed="0.002874"/>
+</kw>
+<kw name="And L'utilisateur lance le client chat" owner="FelixJava" source_name="l'${utilisateur} lance le client chat">
+<kw name="Start Application" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:12.973802" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:53:12.973915" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:53:12.974125" level="INFO">-javaagent:"C:\Users\helen\Documents\toto\qualite\robot_framework\remoteswinglibrary-2.3.3.jar"=127.0.0.1:60982</msg>
+<msg time="2026-05-03T13:53:12.974186" level="INFO">Java version &gt; 9: True</msg>
+<msg time="2026-05-03T13:53:12.980035" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Felix_Java-0.6.jar</msg>
+<msg time="2026-05-03T13:53:15.837273" level="INFO">connecting to started application at 127.0.0.1:61099</msg>
+<msg time="2026-05-03T13:53:15.837459" level="INFO">waiting for api at 127.0.0.1:61099</msg>
+<msg time="2026-05-03T13:53:15.975248" level="INFO">api is ready</msg>
+<msg time="2026-05-03T13:53:15.975373" level="INFO">connected to started application at 127.0.0.1:61099</msg>
+<msg time="2026-05-03T13:53:15.975940" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<arg>${utilisateur}</arg>
+<arg>java -Duser.language\=fr -Duser.country\=FR -jar SUT/Felix_Java-0.6.jar</arg>
+<arg>stdout=/dev/null</arg>
+<arg>stderr=/dev/null</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<status status="PASS" start="2026-05-03T13:53:12.972957" elapsed="3.003096"/>
+</kw>
+<kw name="Set Jemmy Timeouts" owner="RemoteSwingLibrary">
+<arg>2</arg>
+<doc>Sets all relevant jemmy timeouts. 
+By default they are all set to 5 seconds.</doc>
+<status status="PASS" start="2026-05-03T13:53:15.976473" elapsed="0.506250"/>
+</kw>
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:16.483162" elapsed="0.000230"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:12.972154" elapsed="3.511315"/>
+</kw>
+<kw name="When l'utilisateur demande à se connecter" owner="FelixJava" source_name="l'${utilisateur} demande à se connecter">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:16.484551" elapsed="0.000247"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:16.485126" elapsed="0.056039"/>
+</kw>
+<kw name="Click On Component" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Clicks on a component, optionally using click count, a specific mouse button and keyboard modifiers.</doc>
+<status status="PASS" start="2026-05-03T13:53:16.542452" elapsed="0.052112"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:16.483733" elapsed="0.111221"/>
+</kw>
+<kw name="Then Un message informe l'utilisateur qu'une connexion est initiée à l'adresse ${IP_DEFAUT} et au ${PORT_DEFAUT} mentionnés" owner="FelixJava" source_name="Un message informe l'${utilisateur} qu'une connexion est initiée à l'adresse ${ip} et au ${port} mentionnés">
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2026-05-03T13:53:16.598537" level="INFO">${port_nombre} = 12345</msg>
+<var>${port_nombre}</var>
+<arg>${port}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2026-05-03T13:53:16.598034" elapsed="0.000541"/>
+</kw>
+<kw name="Format String" owner="String">
+<msg time="2026-05-03T13:53:16.599252" level="INFO">${message_attendu} = Connexion au chat @127.0.0.1:12345</msg>
+<var>${message_attendu}</var>
+<arg>${MESSAGE_INFORMATION_CONNEXION_IP_PORT}</arg>
+<arg>ip=${ip}</arg>
+<arg>port=${port_nombre}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<status status="PASS" start="2026-05-03T13:53:16.598865" elapsed="0.000442"/>
+</kw>
+<kw name="L'${utilisateur} Est Informé ${message_attendu}" owner="FelixJava" source_name="l'${utilisateur} est informé ${message_attendu}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:16.601247" elapsed="0.000256"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:16.601849" elapsed="0.006308"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:16.641041" level="INFO">${message} = Connexion au chat @127.0.0.1:12345</msg>
+<var>${message}</var>
+<arg>information</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:16.608591" elapsed="0.032499"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${message_attendu}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-05-03T13:53:16.641644" elapsed="0.000442"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:16.600451" elapsed="0.041736"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:16.596554" elapsed="0.045682"/>
+</kw>
+<kw name="And La vue connexion de l'utilisateur est fermée" owner="FelixJava">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="La vue connexion de l'utilisateur est fermée (sans délai)" owner="FelixJava">
+<kw name="Window Should Not Be Open" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:16.655291" level="FAIL">Window 'Connexion' is open</msg>
+<arg>Connexion</arg>
+<doc>Fails if the window is open.
+| `Window Should Not Be Open` | window |</doc>
+<status status="FAIL" start="2026-05-03T13:53:16.644090" elapsed="0.011343">Window 'Connexion' is open</status>
+</kw>
+<tag>robot:private</tag>
+<status status="FAIL" start="2026-05-03T13:53:16.643553" elapsed="0.012141">Window 'Connexion' is open</status>
+</kw>
+<kw name="La vue connexion de l'utilisateur est fermée (sans délai)" owner="FelixJava">
+<kw name="Window Should Not Be Open" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Fails if the window is open.
+| `Window Should Not Be Open` | window |</doc>
+<status status="PASS" start="2026-05-03T13:53:18.658256" elapsed="2.017983"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:18.657291" elapsed="2.019448"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>La vue connexion de l'utilisateur est fermée (sans délai)</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-03T13:53:16.642738" elapsed="4.034282"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:16.642425" elapsed="4.034870"/>
+</kw>
+<kw name="And La vue chat de l'utilisateur est affichée" owner="FelixJava" source_name="la vue chat de l'${utilisateur} est affichée">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:20.679225" elapsed="0.000377"/>
+</kw>
+<kw name="Window Should Be Open" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Fails if the window is not open.</doc>
+<status status="PASS" start="2026-05-03T13:53:20.680063" elapsed="0.009306"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:20.690214" elapsed="0.011097"/>
+</kw>
+<kw name="Component Should Be Visible" owner="RemoteSwingLibrary">
+<arg>saisie</arg>
+<doc>Checks that component is visible.
+*N.B.* Regular expression can be used to select the dialog by prefixing the identifier with ``regexp=``.
+See more details in `[#Regular expressions|Regular expressions]` section.</doc>
+<status status="PASS" start="2026-05-03T13:53:20.702172" elapsed="0.014887"/>
+</kw>
+<kw name="Component Should Be Visible" owner="RemoteSwingLibrary">
+<arg>messages</arg>
+<doc>Checks that component is visible.
+*N.B.* Regular expression can be used to select the dialog by prefixing the identifier with ``regexp=``.
+See more details in `[#Regular expressions|Regular expressions]` section.</doc>
+<status status="PASS" start="2026-05-03T13:53:20.718327" elapsed="0.012873"/>
+</kw>
+<kw name="le champ saisie est vide" owner="FelixJava">
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:20.732820" elapsed="0.006662"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:20.745387" level="INFO">${saisie} = </msg>
+<var>${saisie}</var>
+<arg>saisie</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:20.739914" elapsed="0.005561"/>
+</kw>
+<kw name="Should Be Empty" owner="BuiltIn">
+<msg time="2026-05-03T13:53:20.746580" level="INFO">Length is 0.</msg>
+<arg>${saisie}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<status status="PASS" start="2026-05-03T13:53:20.745884" elapsed="0.000898"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:20.732001" elapsed="0.014919"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn" type="TEARDOWN">
+<arg>'${KEYWORD STATUS}' == 'FAIL'</arg>
+<arg>list windows</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-05-03T13:53:20.747442" elapsed="0.000711"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:20.678334" elapsed="0.069949"/>
+</kw>
+<kw name="And L'utilisateur reçoit un message d'accueil" owner="FelixJava" source_name="l'${utilisateur} reçoit un message d'accueil">
+<kw name="l'${utilisateur} reçoit ${MESSAGE_ACCUEIL}" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="l'${utilisateur} reçoit ${message attendu} (sans délai)" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu} (sans délai)">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:20.755844" elapsed="0.000311"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:20.756523" elapsed="0.005916"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:20.768742" level="INFO">${messages} = 
+* Taper /h pour avoir de l'aide sur les commandes du chat.
+</msg>
+<var>${messages}</var>
+<arg>messages</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:20.762966" elapsed="0.005848"/>
+</kw>
+<kw name="Should End With" owner="BuiltIn">
+<arg>${messages.replace('\n','\\n')}</arg>
+<arg>${message attendu}\\n</arg>
+<doc>Fails if the string ``str1`` does not end with the string ``str2``.</doc>
+<status status="PASS" start="2026-05-03T13:53:20.769116" elapsed="0.001044"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:20.755109" elapsed="0.015192"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>l'${utilisateur} reçoit ${message attendu} (sans délai)</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-03T13:53:20.750680" elapsed="0.019706"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:20.750249" elapsed="0.020240"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:20.748768" elapsed="0.021819"/>
+</kw>
+<kw name="And Tous les ${autres utilisateurs} reçoivent un message d'arrivée du nouvel utilisateur" owner="FelixJava" source_name="tous les ${utilisateurs} reçoivent un message d'arrivée du nouvel utilisateur">
+<for flavor="IN">
+<iter>
+<kw name="l'${utilisateur} reçoit ${MESSAGE_ARRIVEE}" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu}">
+<tag>robot:private</tag>
+<status status="NOT RUN" start="2026-05-03T13:53:20.773118" elapsed="0.000071"/>
+</kw>
+<var name="${utilisateur}"/>
+<status status="NOT RUN" start="2026-05-03T13:53:20.772124" elapsed="0.001136"/>
+</iter>
+<var>${utilisateur}</var>
+<value>@{utilisateurs}</value>
+<status status="NOT RUN" start="2026-05-03T13:53:20.771888" elapsed="0.001431"/>
+</for>
+<status status="PASS" start="2026-05-03T13:53:20.771424" elapsed="0.002004"/>
+</kw>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="l'utilisateur ferme le client chat" owner="FelixJava" source_name="l'${utilisateur} ferme le client chat">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:20.775485" elapsed="0.000274"/>
+</kw>
+<kw name="System Exit" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:23.491265" level="INFO">Connection died as expected</msg>
+<msg time="2026-05-03T13:53:23.491462" level="INFO">Waiting for process to complete.</msg>
+<doc>Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<status status="PASS" start="2026-05-03T13:53:20.776092" elapsed="2.715555"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:20.774795" elapsed="2.717049"/>
+</kw>
+<kw name="plusieurs ${autres utilisateurs} ferment leur client chat" owner="FelixJava" source_name="plusieurs ${utilisateurs} ferment leur client chat">
+<for flavor="IN">
+<iter>
+<kw name="l'${utilisateur} ferme le client chat" owner="FelixJava" source_name="l'${utilisateur} ferme le client chat">
+<status status="NOT RUN" start="2026-05-03T13:53:23.496279" elapsed="0.000070"/>
+</kw>
+<var name="${utilisateur}"/>
+<status status="NOT RUN" start="2026-05-03T13:53:23.495369" elapsed="0.001046"/>
+</iter>
+<var>${utilisateur}</var>
+<value>@{utilisateurs}</value>
+<status status="NOT RUN" start="2026-05-03T13:53:23.494987" elapsed="0.001506"/>
+</for>
+<status status="PASS" start="2026-05-03T13:53:23.493974" elapsed="0.002641"/>
+</kw>
+<kw name="Le serveur chat est arrêté" owner="CamixJava">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-05-03T13:53:23.498654" level="INFO">${OS} = Windows</msg>
+<var>${OS}</var>
+<arg>platform.system()</arg>
+<arg>platform</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-05-03T13:53:23.497901" elapsed="0.000814"/>
+</kw>
+<if>
+<branch type="IF" condition="'${OS}' == 'Windows'">
+<kw name="Get Process Id" owner="Process">
+<msg time="2026-05-03T13:53:23.500004" level="INFO">${Camix PID} = 20744</msg>
+<var>${Camix PID}</var>
+<arg>Camix</arg>
+<doc>Returns the process ID (pid) of the process as an integer.</doc>
+<status status="PASS" start="2026-05-03T13:53:23.499433" elapsed="0.000627"/>
+</kw>
+<kw name="Run Process" owner="Process">
+<msg time="2026-05-03T13:53:23.500967" level="INFO">Starting process:
+taskkill /F /PID 20744</msg>
+<msg time="2026-05-03T13:53:23.507017" level="INFO">Waiting for process to complete.</msg>
+<msg time="2026-05-03T13:53:23.703457" level="INFO">Process completed.</msg>
+<arg>taskkill</arg>
+<arg>/F</arg>
+<arg>/PID</arg>
+<arg>${Camix PID}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2026-05-03T13:53:23.500403" elapsed="0.203332"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:23.498880" elapsed="0.205056"/>
+</branch>
+<branch type="ELSE">
+<kw name="Terminate Process" owner="Process">
+<arg>Camix</arg>
+<doc>Stops the process gracefully or forcefully.</doc>
+<status status="NOT RUN" start="2026-05-03T13:53:23.704648" elapsed="0.000085"/>
+</kw>
+<status status="NOT RUN" start="2026-05-03T13:53:23.704031" elapsed="0.000822"/>
+</branch>
+<status status="PASS" start="2026-05-03T13:53:23.498838" elapsed="0.206173"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-03T13:53:24.706891" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-03T13:53:23.705619" elapsed="1.001528"/>
+</kw>
+<kw name="Process Should Be Stopped" owner="Process">
+<arg>Camix</arg>
+<arg>Le serveur Camix n'est pas arrêté.</arg>
+<doc>Verifies that the process is not running.</doc>
+<status status="PASS" start="2026-05-03T13:53:24.707732" elapsed="0.000713"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:23.497186" elapsed="1.211429"/>
+</kw>
+<arg>l'utilisateur ferme le client chat</arg>
+<arg>AND</arg>
+<arg>plusieurs ${autres utilisateurs} ferment leur client chat</arg>
+<arg>AND</arg>
+<arg>le serveur chat est arrêté</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-05-03T13:53:20.773851" elapsed="3.934918"/>
+</kw>
+<arg>${0 autres utilisateurs}</arg>
+<status status="PASS" start="2026-05-03T13:53:11.944276" elapsed="12.764772"/>
+</kw>
+<kw name="Se connecter au chat - IP/port défaut" owner="SeConnecterAuChat">
+<kw name="Given Le serveur chat est accessible @${IP_DEFAUT}:${PORT_DEFAUT}" owner="CamixJava" source_name="le serveur chat est accessible @${ip}:${port}">
+<kw name="Start Process" owner="Process">
+<msg time="2026-05-03T13:53:24.714770" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Camix_Java-0.6.jar</msg>
+<arg>java</arg>
+<arg>-Duser.language\=fr</arg>
+<arg>-Duser.country\=FR</arg>
+<arg>-jar</arg>
+<arg>SUT/Camix_Java-0.6.jar</arg>
+<arg>alias=Camix</arg>
+<doc>Starts a new process on background.</doc>
+<status status="PASS" start="2026-05-03T13:53:24.713865" elapsed="0.016917"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-03T13:53:25.732814" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-03T13:53:24.731334" elapsed="1.001697"/>
+</kw>
+<kw name="Process Should Be Running" owner="Process">
+<arg>Camix</arg>
+<arg>Le serveur Camix n'est pas accessible.</arg>
+<doc>Verifies that the process is running.</doc>
+<status status="PASS" start="2026-05-03T13:53:25.733528" elapsed="0.000672"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-03T13:53:25.735261" level="INFO">TODO: assurer que le serveur Camix est accessible @127.0.0.1:12345</msg>
+<arg>TODO: assurer que le serveur Camix est accessible @${ip}:${port}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-03T13:53:25.734623" elapsed="0.000742"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:24.713002" elapsed="1.022498"/>
+</kw>
+<kw name="And Plusieurs ${autres utilisateurs} sont connectés au chat (@${IP_DEFAUT}:${PORT_DEFAUT}, canal par défaut)" owner="SeConnecterAuChat" source_name="Plusieurs ${utilisateurs} sont connectés au chat (@${ip}:${port}, canal par défaut)">
+<for flavor="IN">
+<iter>
+<kw name="Given L'${utilisateur} est connecté au chat (@${ip}:${port}, canal par défaut)" owner="SeConnecterAuChat" source_name="L'${utilisateur} est connecté au chat (@${ip}:${port}, canal par défaut)">
+<kw name="Given L'${utilisateur} lance le client chat" owner="FelixJava" source_name="l'${utilisateur} lance le client chat">
+<kw name="Start Application" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:25.744747" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:53:25.744865" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:53:25.745013" level="INFO">-javaagent:"C:\Users\helen\Documents\toto\qualite\robot_framework\remoteswinglibrary-2.3.3.jar"=127.0.0.1:60982</msg>
+<msg time="2026-05-03T13:53:25.745071" level="INFO">Java version &gt; 9: True</msg>
+<msg time="2026-05-03T13:53:25.750776" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Felix_Java-0.6.jar</msg>
+<msg time="2026-05-03T13:53:28.511105" level="INFO">connecting to started application at 127.0.0.1:61123</msg>
+<msg time="2026-05-03T13:53:28.511403" level="INFO">waiting for api at 127.0.0.1:61123</msg>
+<msg time="2026-05-03T13:53:28.664485" level="INFO">api is ready</msg>
+<msg time="2026-05-03T13:53:28.664693" level="INFO">connected to started application at 127.0.0.1:61123</msg>
+<msg time="2026-05-03T13:53:28.665477" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<arg>${utilisateur}</arg>
+<arg>java -Duser.language\=fr -Duser.country\=FR -jar SUT/Felix_Java-0.6.jar</arg>
+<arg>stdout=/dev/null</arg>
+<arg>stderr=/dev/null</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<status status="PASS" start="2026-05-03T13:53:25.744087" elapsed="2.921646"/>
+</kw>
+<kw name="Set Jemmy Timeouts" owner="RemoteSwingLibrary">
+<arg>2</arg>
+<doc>Sets all relevant jemmy timeouts. 
+By default they are all set to 5 seconds.</doc>
+<status status="PASS" start="2026-05-03T13:53:28.666320" elapsed="0.540644"/>
+</kw>
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:29.207325" elapsed="0.000285"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:25.743208" elapsed="3.464479"/>
+</kw>
+<kw name="When L'${utilisateur} modifie l'adresse ${ip}" owner="FelixJava" source_name="l'${utilisateur} modifie l'adresse ${ip}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:29.209123" elapsed="0.000238"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:29.209677" elapsed="0.047957"/>
+</kw>
+<kw name="Focus To Component" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" start="2026-05-03T13:53:29.258658" elapsed="0.038910"/>
+</kw>
+<kw name="Clear Text Field" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Clears contents of text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:29.298101" elapsed="0.054098"/>
+</kw>
+<kw name="Type Into Text Field" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<arg>${ip}</arg>
+<doc>Types text into a text component (e.g. text field, password field, text area).
+Same as `Insert Into Textfield` but sends real key events when setting text field contents.
+Useful if application expects real keyboard events instead of only setting the text of the textfield.</doc>
+<status status="PASS" start="2026-05-03T13:53:29.352593" elapsed="0.030474"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:29.208372" elapsed="0.174938"/>
+</kw>
+<kw name="And L'${utilisateur} modifie le numéro du ${port}" owner="FelixJava" source_name="l'${utilisateur} modifie le numéro du ${port}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:29.385122" elapsed="0.000296"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:29.385780" elapsed="0.006320"/>
+</kw>
+<kw name="Focus To Component" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" start="2026-05-03T13:53:29.392838" elapsed="0.010873"/>
+</kw>
+<kw name="Clear Text Field" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<doc>Clears contents of text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:29.404960" elapsed="0.041882"/>
+</kw>
+<kw name="Type Into Text Field" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<arg>${port}</arg>
+<doc>Types text into a text component (e.g. text field, password field, text area).
+Same as `Insert Into Textfield` but sends real key events when setting text field contents.
+Useful if application expects real keyboard events instead of only setting the text of the textfield.</doc>
+<status status="PASS" start="2026-05-03T13:53:29.447298" elapsed="0.031158"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:29.384152" elapsed="0.094559"/>
+</kw>
+<kw name="And L'${utilisateur} demande à se connecter" owner="FelixJava" source_name="l'${utilisateur} demande à se connecter">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:29.480194" elapsed="0.000335"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:29.480953" elapsed="0.006599"/>
+</kw>
+<kw name="Click On Component" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Clicks on a component, optionally using click count, a specific mouse button and keyboard modifiers.</doc>
+<status status="PASS" start="2026-05-03T13:53:29.488322" elapsed="0.044035"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:29.479387" elapsed="0.053172"/>
+</kw>
+<kw name="And L'${utilisateur} reçoit un message d'accueil" owner="FelixJava" source_name="l'${utilisateur} reçoit un message d'accueil">
+<kw name="l'${utilisateur} reçoit ${MESSAGE_ACCUEIL}" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="l'${utilisateur} reçoit ${message attendu} (sans délai)" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu} (sans délai)">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:29.539837" elapsed="0.000339"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:29.540570" elapsed="0.700636"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:30.264572" level="INFO">${messages} = 
+* Taper /h pour avoir de l'aide sur les commandes du chat.
+</msg>
+<var>${messages}</var>
+<arg>messages</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:30.242433" elapsed="0.022427"/>
+</kw>
+<kw name="Should End With" owner="BuiltIn">
+<arg>${messages.replace('\n','\\n')}</arg>
+<arg>${message attendu}\\n</arg>
+<doc>Fails if the string ``str1`` does not end with the string ``str2``.</doc>
+<status status="PASS" start="2026-05-03T13:53:30.266691" elapsed="0.004561"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:29.538944" elapsed="0.732593"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>l'${utilisateur} reçoit ${message attendu} (sans délai)</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-03T13:53:29.535757" elapsed="0.735944"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:29.534903" elapsed="0.736964"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:29.533541" elapsed="0.738484"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:25.739642" elapsed="4.532524"/>
+</kw>
+<var name="${utilisateur}">premier</var>
+<status status="PASS" start="2026-05-03T13:53:25.738221" elapsed="4.534014"/>
+</iter>
+<iter>
+<kw name="Given L'${utilisateur} est connecté au chat (@${ip}:${port}, canal par défaut)" owner="SeConnecterAuChat" source_name="L'${utilisateur} est connecté au chat (@${ip}:${port}, canal par défaut)">
+<kw name="Given L'${utilisateur} lance le client chat" owner="FelixJava" source_name="l'${utilisateur} lance le client chat">
+<kw name="Start Application" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:30.277867" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:53:30.277993" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:53:30.278193" level="INFO">-javaagent:"C:\Users\helen\Documents\toto\qualite\robot_framework\remoteswinglibrary-2.3.3.jar"=127.0.0.1:60982</msg>
+<msg time="2026-05-03T13:53:30.278272" level="INFO">Java version &gt; 9: True</msg>
+<msg time="2026-05-03T13:53:30.287528" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Felix_Java-0.6.jar</msg>
+<msg time="2026-05-03T13:53:33.034431" level="INFO">connecting to started application at 127.0.0.1:61140</msg>
+<msg time="2026-05-03T13:53:33.034605" level="INFO">waiting for api at 127.0.0.1:61140</msg>
+<msg time="2026-05-03T13:53:33.161663" level="INFO">api is ready</msg>
+<msg time="2026-05-03T13:53:33.161804" level="INFO">connected to started application at 127.0.0.1:61140</msg>
+<msg time="2026-05-03T13:53:33.162728" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<arg>${utilisateur}</arg>
+<arg>java -Duser.language\=fr -Duser.country\=FR -jar SUT/Felix_Java-0.6.jar</arg>
+<arg>stdout=/dev/null</arg>
+<arg>stderr=/dev/null</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<status status="PASS" start="2026-05-03T13:53:30.276976" elapsed="2.885914"/>
+</kw>
+<kw name="Set Jemmy Timeouts" owner="RemoteSwingLibrary">
+<arg>2</arg>
+<doc>Sets all relevant jemmy timeouts. 
+By default they are all set to 5 seconds.</doc>
+<status status="PASS" start="2026-05-03T13:53:33.163536" elapsed="0.523913"/>
+</kw>
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:33.687930" elapsed="0.000327"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:30.275901" elapsed="3.412496"/>
+</kw>
+<kw name="When L'${utilisateur} modifie l'adresse ${ip}" owner="FelixJava" source_name="l'${utilisateur} modifie l'adresse ${ip}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:33.689905" elapsed="0.000247"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:33.690478" elapsed="0.062474"/>
+</kw>
+<kw name="Focus To Component" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" start="2026-05-03T13:53:33.754264" elapsed="0.035265"/>
+</kw>
+<kw name="Clear Text Field" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Clears contents of text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:33.789993" elapsed="0.056777"/>
+</kw>
+<kw name="Type Into Text Field" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<arg>${ip}</arg>
+<doc>Types text into a text component (e.g. text field, password field, text area).
+Same as `Insert Into Textfield` but sends real key events when setting text field contents.
+Useful if application expects real keyboard events instead of only setting the text of the textfield.</doc>
+<status status="PASS" start="2026-05-03T13:53:33.847454" elapsed="0.030765"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:33.689287" elapsed="0.189143"/>
+</kw>
+<kw name="And L'${utilisateur} modifie le numéro du ${port}" owner="FelixJava" source_name="l'${utilisateur} modifie le numéro du ${port}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:33.879617" elapsed="0.000152"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:33.880016" elapsed="0.007719"/>
+</kw>
+<kw name="Focus To Component" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" start="2026-05-03T13:53:33.888298" elapsed="0.012290"/>
+</kw>
+<kw name="Clear Text Field" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<doc>Clears contents of text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:33.901216" elapsed="0.037651"/>
+</kw>
+<kw name="Type Into Text Field" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<arg>${port}</arg>
+<doc>Types text into a text component (e.g. text field, password field, text area).
+Same as `Insert Into Textfield` but sends real key events when setting text field contents.
+Useful if application expects real keyboard events instead of only setting the text of the textfield.</doc>
+<status status="PASS" start="2026-05-03T13:53:33.939477" elapsed="0.030202"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:33.879179" elapsed="0.090633"/>
+</kw>
+<kw name="And L'${utilisateur} demande à se connecter" owner="FelixJava" source_name="l'${utilisateur} demande à se connecter">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:33.970789" elapsed="0.000342"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:33.971516" elapsed="0.007985"/>
+</kw>
+<kw name="Click On Component" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Clicks on a component, optionally using click count, a specific mouse button and keyboard modifiers.</doc>
+<status status="PASS" start="2026-05-03T13:53:33.980239" elapsed="0.040368"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:33.970393" elapsed="0.050553"/>
+</kw>
+<kw name="And L'${utilisateur} reçoit un message d'accueil" owner="FelixJava" source_name="l'${utilisateur} reçoit un message d'accueil">
+<kw name="l'${utilisateur} reçoit ${MESSAGE_ACCUEIL}" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="l'${utilisateur} reçoit ${message attendu} (sans délai)" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu} (sans délai)">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:34.028081" elapsed="0.000373"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:34.028895" elapsed="0.663725"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:34.709777" level="INFO">${messages} = 
+* Taper /h pour avoir de l'aide sur les commandes du chat.
+</msg>
+<var>${messages}</var>
+<arg>messages</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:34.693610" elapsed="0.016281"/>
+</kw>
+<kw name="Should End With" owner="BuiltIn">
+<arg>${messages.replace('\n','\\n')}</arg>
+<arg>${message attendu}\\n</arg>
+<doc>Fails if the string ``str1`` does not end with the string ``str2``.</doc>
+<status status="PASS" start="2026-05-03T13:53:34.710372" elapsed="0.002126"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:34.027283" elapsed="0.685457"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>l'${utilisateur} reçoit ${message attendu} (sans délai)</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-03T13:53:34.023849" elapsed="0.689010"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:34.023042" elapsed="0.689976"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:34.021825" elapsed="0.691290"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:30.274363" elapsed="4.438841"/>
+</kw>
+<var name="${utilisateur}">deuxième</var>
+<status status="PASS" start="2026-05-03T13:53:30.272624" elapsed="4.440635"/>
+</iter>
+<var>${utilisateur}</var>
+<value>@{utilisateurs}</value>
+<status status="PASS" start="2026-05-03T13:53:25.737892" elapsed="8.975451"/>
+</for>
+<status status="PASS" start="2026-05-03T13:53:25.737164" elapsed="8.976296"/>
+</kw>
+<kw name="And L'utilisateur lance le client chat" owner="FelixJava" source_name="l'${utilisateur} lance le client chat">
+<kw name="Start Application" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:34.716078" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:53:34.716182" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:53:34.716346" level="INFO">-javaagent:"C:\Users\helen\Documents\toto\qualite\robot_framework\remoteswinglibrary-2.3.3.jar"=127.0.0.1:60982</msg>
+<msg time="2026-05-03T13:53:34.716417" level="INFO">Java version &gt; 9: True</msg>
+<msg time="2026-05-03T13:53:34.724489" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Felix_Java-0.6.jar</msg>
+<msg time="2026-05-03T13:53:37.447303" level="INFO">connecting to started application at 127.0.0.1:61157</msg>
+<msg time="2026-05-03T13:53:37.447472" level="INFO">waiting for api at 127.0.0.1:61157</msg>
+<msg time="2026-05-03T13:53:37.578970" level="INFO">api is ready</msg>
+<msg time="2026-05-03T13:53:37.579081" level="INFO">connected to started application at 127.0.0.1:61157</msg>
+<msg time="2026-05-03T13:53:37.579640" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<arg>${utilisateur}</arg>
+<arg>java -Duser.language\=fr -Duser.country\=FR -jar SUT/Felix_Java-0.6.jar</arg>
+<arg>stdout=/dev/null</arg>
+<arg>stderr=/dev/null</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<status status="PASS" start="2026-05-03T13:53:34.715314" elapsed="2.864718"/>
+</kw>
+<kw name="Set Jemmy Timeouts" owner="RemoteSwingLibrary">
+<arg>2</arg>
+<doc>Sets all relevant jemmy timeouts. 
+By default they are all set to 5 seconds.</doc>
+<status status="PASS" start="2026-05-03T13:53:37.580488" elapsed="0.570852"/>
+</kw>
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:38.152662" elapsed="0.000291"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:34.714139" elapsed="3.438944"/>
+</kw>
+<kw name="When l'utilisateur demande à se connecter" owner="FelixJava" source_name="l'${utilisateur} demande à se connecter">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:38.154840" elapsed="0.000430"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:38.155632" elapsed="0.129390"/>
+</kw>
+<kw name="Click On Component" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Clicks on a component, optionally using click count, a specific mouse button and keyboard modifiers.</doc>
+<status status="PASS" start="2026-05-03T13:53:38.286017" elapsed="0.088266"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:38.153523" elapsed="0.221030"/>
+</kw>
+<kw name="Then Un message informe l'utilisateur qu'une connexion est initiée à l'adresse ${IP_DEFAUT} et au ${PORT_DEFAUT} mentionnés" owner="FelixJava" source_name="Un message informe l'${utilisateur} qu'une connexion est initiée à l'adresse ${ip} et au ${port} mentionnés">
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2026-05-03T13:53:38.377016" level="INFO">${port_nombre} = 12345</msg>
+<var>${port_nombre}</var>
+<arg>${port}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2026-05-03T13:53:38.376521" elapsed="0.000544"/>
+</kw>
+<kw name="Format String" owner="String">
+<msg time="2026-05-03T13:53:38.377589" level="INFO">${message_attendu} = Connexion au chat @127.0.0.1:12345</msg>
+<var>${message_attendu}</var>
+<arg>${MESSAGE_INFORMATION_CONNEXION_IP_PORT}</arg>
+<arg>ip=${ip}</arg>
+<arg>port=${port_nombre}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<status status="PASS" start="2026-05-03T13:53:38.377320" elapsed="0.000307"/>
+</kw>
+<kw name="L'${utilisateur} Est Informé ${message_attendu}" owner="FelixJava" source_name="l'${utilisateur} est informé ${message_attendu}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:38.378478" elapsed="0.000115"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:38.378802" elapsed="0.011284"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:38.466396" level="INFO">${message} = Connexion au chat @127.0.0.1:12345</msg>
+<var>${message}</var>
+<arg>information</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:38.390590" elapsed="0.075958"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${message_attendu}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-05-03T13:53:38.467079" elapsed="0.000672"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:38.378161" elapsed="0.089686"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:38.375674" elapsed="0.092251"/>
+</kw>
+<kw name="And La vue connexion de l'utilisateur est fermée" owner="FelixJava">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="La vue connexion de l'utilisateur est fermée (sans délai)" owner="FelixJava">
+<kw name="Window Should Not Be Open" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:38.489444" level="FAIL">Window 'Connexion' is open</msg>
+<arg>Connexion</arg>
+<doc>Fails if the window is open.
+| `Window Should Not Be Open` | window |</doc>
+<status status="FAIL" start="2026-05-03T13:53:38.469775" elapsed="0.019787">Window 'Connexion' is open</status>
+</kw>
+<tag>robot:private</tag>
+<status status="FAIL" start="2026-05-03T13:53:38.469284" elapsed="0.020500">Window 'Connexion' is open</status>
+</kw>
+<kw name="La vue connexion de l'utilisateur est fermée (sans délai)" owner="FelixJava">
+<kw name="Window Should Not Be Open" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Fails if the window is open.
+| `Window Should Not Be Open` | window |</doc>
+<status status="PASS" start="2026-05-03T13:53:40.492375" elapsed="2.020691"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:40.491397" elapsed="2.022084"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>La vue connexion de l'utilisateur est fermée (sans délai)</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-03T13:53:38.468596" elapsed="4.045080"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:38.468163" elapsed="4.045672"/>
+</kw>
+<kw name="And La vue chat de l'utilisateur est affichée" owner="FelixJava" source_name="la vue chat de l'${utilisateur} est affichée">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.515510" elapsed="0.000364"/>
+</kw>
+<kw name="Window Should Be Open" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Fails if the window is not open.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.516319" elapsed="0.011839"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.528919" elapsed="0.009845"/>
+</kw>
+<kw name="Component Should Be Visible" owner="RemoteSwingLibrary">
+<arg>saisie</arg>
+<doc>Checks that component is visible.
+*N.B.* Regular expression can be used to select the dialog by prefixing the identifier with ``regexp=``.
+See more details in `[#Regular expressions|Regular expressions]` section.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.539642" elapsed="0.012387"/>
+</kw>
+<kw name="Component Should Be Visible" owner="RemoteSwingLibrary">
+<arg>messages</arg>
+<doc>Checks that component is visible.
+*N.B.* Regular expression can be used to select the dialog by prefixing the identifier with ``regexp=``.
+See more details in `[#Regular expressions|Regular expressions]` section.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.552859" elapsed="0.011336"/>
+</kw>
+<kw name="le champ saisie est vide" owner="FelixJava">
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.566083" elapsed="0.013266"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:42.598481" level="INFO">${saisie} = </msg>
+<var>${saisie}</var>
+<arg>saisie</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:42.580213" elapsed="0.018419"/>
+</kw>
+<kw name="Should Be Empty" owner="BuiltIn">
+<msg time="2026-05-03T13:53:42.601201" level="INFO">Length is 0.</msg>
+<arg>${saisie}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.599647" elapsed="0.001947"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:42.565131" elapsed="0.037116"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn" type="TEARDOWN">
+<arg>'${KEYWORD STATUS}' == 'FAIL'</arg>
+<arg>list windows</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.603901" elapsed="0.001628"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:42.514621" elapsed="0.091176"/>
+</kw>
+<kw name="And L'utilisateur reçoit un message d'accueil" owner="FelixJava" source_name="l'${utilisateur} reçoit un message d'accueil">
+<kw name="l'${utilisateur} reçoit ${MESSAGE_ACCUEIL}" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="l'${utilisateur} reçoit ${message attendu} (sans délai)" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu} (sans délai)">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.614374" elapsed="0.000358"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.615176" elapsed="0.009187"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:42.636040" level="INFO">${messages} = 
+* Taper /h pour avoir de l'aide sur les commandes du chat.
+</msg>
+<var>${messages}</var>
+<arg>messages</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:42.625146" elapsed="0.010949"/>
+</kw>
+<kw name="Should End With" owner="BuiltIn">
+<arg>${messages.replace('\n','\\n')}</arg>
+<arg>${message attendu}\\n</arg>
+<doc>Fails if the string ``str1`` does not end with the string ``str2``.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.636410" elapsed="0.001136"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:42.613479" elapsed="0.024228"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>l'${utilisateur} reçoit ${message attendu} (sans délai)</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.609608" elapsed="0.028200"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:42.608328" elapsed="0.029602"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:42.606473" elapsed="0.031551"/>
+</kw>
+<kw name="And Tous les ${autres utilisateurs} reçoivent un message d'arrivée du nouvel utilisateur" owner="FelixJava" source_name="tous les ${utilisateurs} reçoivent un message d'arrivée du nouvel utilisateur">
+<for flavor="IN">
+<iter>
+<kw name="l'${utilisateur} reçoit ${MESSAGE_ARRIVEE}" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="l'${utilisateur} reçoit ${message attendu} (sans délai)" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu} (sans délai)">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.646430" elapsed="0.000328"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.647150" elapsed="0.005922"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:42.659678" level="INFO">${messages} = 
+* Taper /h pour avoir de l'aide sur les commandes du chat.
+
+* Un nouvel utilisateur est dans le chat (place publique).
+
+* Un nouvel utilisateur est dans le chat (place publique).
+</msg>
+<var>${messages}</var>
+<arg>messages</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:42.653530" elapsed="0.006234"/>
+</kw>
+<kw name="Should End With" owner="BuiltIn">
+<arg>${messages.replace('\n','\\n')}</arg>
+<arg>${message attendu}\\n</arg>
+<doc>Fails if the string ``str1`` does not end with the string ``str2``.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.660099" elapsed="0.001071"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:42.645504" elapsed="0.015894"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>l'${utilisateur} reçoit ${message attendu} (sans délai)</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.641827" elapsed="0.019670"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:42.640415" elapsed="0.021206"/>
+</kw>
+<var name="${utilisateur}">premier</var>
+<status status="PASS" start="2026-05-03T13:53:42.639201" elapsed="0.022477"/>
+</iter>
+<iter>
+<kw name="l'${utilisateur} reçoit ${MESSAGE_ARRIVEE}" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="l'${utilisateur} reçoit ${message attendu} (sans délai)" owner="FelixJava" source_name="l'${utilisateur} reçoit ${message attendu} (sans délai)">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.668791" elapsed="0.000356"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.669516" elapsed="0.012514"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:42.694200" level="INFO">${messages} = 
+* Taper /h pour avoir de l'aide sur les commandes du chat.
+
+* Un nouvel utilisateur est dans le chat (place publique).
+</msg>
+<var>${messages}</var>
+<arg>messages</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:42.682876" elapsed="0.011475"/>
+</kw>
+<kw name="Should End With" owner="BuiltIn">
+<arg>${messages.replace('\n','\\n')}</arg>
+<arg>${message attendu}\\n</arg>
+<doc>Fails if the string ``str1`` does not end with the string ``str2``.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.694723" elapsed="0.001080"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:42.667985" elapsed="0.027895"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>l'${utilisateur} reçoit ${message attendu} (sans délai)</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.663944" elapsed="0.031981"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:42.663028" elapsed="0.032951"/>
+</kw>
+<var name="${utilisateur}">deuxième</var>
+<status status="PASS" start="2026-05-03T13:53:42.661900" elapsed="0.034105"/>
+</iter>
+<var>${utilisateur}</var>
+<value>@{utilisateurs}</value>
+<status status="PASS" start="2026-05-03T13:53:42.639049" elapsed="0.056994"/>
+</for>
+<status status="PASS" start="2026-05-03T13:53:42.638696" elapsed="0.057400"/>
+</kw>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="l'utilisateur ferme le client chat" owner="FelixJava" source_name="l'${utilisateur} ferme le client chat">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.697865" elapsed="0.000142"/>
+</kw>
+<kw name="System Exit" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:45.409486" level="INFO">Connection died as expected</msg>
+<msg time="2026-05-03T13:53:45.409775" level="INFO">Waiting for process to complete.</msg>
+<doc>Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.698188" elapsed="2.711881"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:42.697410" elapsed="2.712975"/>
+</kw>
+<kw name="plusieurs ${autres utilisateurs} ferment leur client chat" owner="FelixJava" source_name="plusieurs ${utilisateurs} ferment leur client chat">
+<for flavor="IN">
+<iter>
+<kw name="l'${utilisateur} ferme le client chat" owner="FelixJava" source_name="l'${utilisateur} ferme le client chat">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:45.415255" elapsed="0.000345"/>
+</kw>
+<kw name="System Exit" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:48.133792" level="INFO">Connection died as expected</msg>
+<msg time="2026-05-03T13:53:48.134075" level="INFO">Waiting for process to complete.</msg>
+<doc>Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<status status="PASS" start="2026-05-03T13:53:45.416022" elapsed="2.718226"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:45.414403" elapsed="2.720037"/>
+</kw>
+<var name="${utilisateur}">premier</var>
+<status status="PASS" start="2026-05-03T13:53:45.413600" elapsed="2.720909"/>
+</iter>
+<iter>
+<kw name="l'${utilisateur} ferme le client chat" owner="FelixJava" source_name="l'${utilisateur} ferme le client chat">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:48.136705" elapsed="0.000354"/>
+</kw>
+<kw name="System Exit" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:50.834319" level="INFO">Connection died as expected</msg>
+<msg time="2026-05-03T13:53:50.834567" level="INFO">Waiting for process to complete.</msg>
+<doc>Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<status status="PASS" start="2026-05-03T13:53:48.137502" elapsed="2.697227"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:48.135739" elapsed="2.699167"/>
+</kw>
+<var name="${utilisateur}">deuxième</var>
+<status status="PASS" start="2026-05-03T13:53:48.134795" elapsed="2.700177"/>
+</iter>
+<var>${utilisateur}</var>
+<value>@{utilisateurs}</value>
+<status status="PASS" start="2026-05-03T13:53:45.413267" elapsed="5.421794"/>
+</for>
+<status status="PASS" start="2026-05-03T13:53:45.412609" elapsed="5.422582"/>
+</kw>
+<kw name="Le serveur chat est arrêté" owner="CamixJava">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-05-03T13:53:50.837799" level="INFO">${OS} = Windows</msg>
+<var>${OS}</var>
+<arg>platform.system()</arg>
+<arg>platform</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-05-03T13:53:50.836876" elapsed="0.000996"/>
+</kw>
+<if>
+<branch type="IF" condition="'${OS}' == 'Windows'">
+<kw name="Get Process Id" owner="Process">
+<msg time="2026-05-03T13:53:50.839360" level="INFO">${Camix PID} = 14204</msg>
+<var>${Camix PID}</var>
+<arg>Camix</arg>
+<doc>Returns the process ID (pid) of the process as an integer.</doc>
+<status status="PASS" start="2026-05-03T13:53:50.838708" elapsed="0.000725"/>
+</kw>
+<kw name="Run Process" owner="Process">
+<msg time="2026-05-03T13:53:50.840597" level="INFO">Starting process:
+taskkill /F /PID 14204</msg>
+<msg time="2026-05-03T13:53:50.847200" level="INFO">Waiting for process to complete.</msg>
+<msg time="2026-05-03T13:53:51.022451" level="INFO">Process completed.</msg>
+<arg>taskkill</arg>
+<arg>/F</arg>
+<arg>/PID</arg>
+<arg>${Camix PID}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2026-05-03T13:53:50.839867" elapsed="0.182734"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:50.838077" elapsed="0.184584"/>
+</branch>
+<branch type="ELSE">
+<kw name="Terminate Process" owner="Process">
+<arg>Camix</arg>
+<doc>Stops the process gracefully or forcefully.</doc>
+<status status="NOT RUN" start="2026-05-03T13:53:51.022919" elapsed="0.000022"/>
+</kw>
+<status status="NOT RUN" start="2026-05-03T13:53:51.022694" elapsed="0.000277"/>
+</branch>
+<status status="PASS" start="2026-05-03T13:53:50.838026" elapsed="0.184964"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-03T13:53:52.023924" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-03T13:53:51.023123" elapsed="1.001059"/>
+</kw>
+<kw name="Process Should Be Stopped" owner="Process">
+<arg>Camix</arg>
+<arg>Le serveur Camix n'est pas arrêté.</arg>
+<doc>Verifies that the process is not running.</doc>
+<status status="PASS" start="2026-05-03T13:53:52.024710" elapsed="0.000693"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:50.835991" elapsed="1.189595"/>
+</kw>
+<arg>l'utilisateur ferme le client chat</arg>
+<arg>AND</arg>
+<arg>plusieurs ${autres utilisateurs} ferment leur client chat</arg>
+<arg>AND</arg>
+<arg>le serveur chat est arrêté</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-05-03T13:53:42.696358" elapsed="9.329326"/>
+</kw>
+<arg>${2 autres utilisateurs}</arg>
+<status status="PASS" start="2026-05-03T13:53:24.711108" elapsed="27.314716"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:11.941991" elapsed="40.084564"/>
+</test>
+<test id="s1-s1-s1-s1-t4" name="AC - Se connecter au chat - connexion impossible" line="48">
+<kw name="Se connecter au chat - connexion impossible" owner="SeConnecterAuChat">
+<kw name="Given Le serveur chat n'est pas accessible @${IP_DEFAUT}:${PORT_DEFAUT}" owner="CamixJava" source_name="le serveur chat n'est pas accessible @${ip}:${port}">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-03T13:53:52.033469" level="INFO">TODO: assurer que le serveur Camix n'est pas accessible @127.0.0.1:12345</msg>
+<arg>TODO: assurer que le serveur Camix n'est pas accessible @${ip}:${port}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-03T13:53:52.032816" elapsed="0.000760"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:52.031885" elapsed="0.001820"/>
+</kw>
+<kw name="And L'utilisateur lance le client chat" owner="FelixJava" source_name="l'${utilisateur} lance le client chat">
+<kw name="Start Application" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:52.035877" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:53:52.036019" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg time="2026-05-03T13:53:52.036210" level="INFO">-javaagent:"C:\Users\helen\Documents\toto\qualite\robot_framework\remoteswinglibrary-2.3.3.jar"=127.0.0.1:60982</msg>
+<msg time="2026-05-03T13:53:52.036281" level="INFO">Java version &gt; 9: True</msg>
+<msg time="2026-05-03T13:53:52.042730" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Felix_Java-0.6.jar</msg>
+<msg time="2026-05-03T13:53:54.829040" level="INFO">connecting to started application at 127.0.0.1:61186</msg>
+<msg time="2026-05-03T13:53:54.829158" level="INFO">waiting for api at 127.0.0.1:61186</msg>
+<msg time="2026-05-03T13:53:54.964638" level="INFO">api is ready</msg>
+<msg time="2026-05-03T13:53:54.964771" level="INFO">connected to started application at 127.0.0.1:61186</msg>
+<msg time="2026-05-03T13:53:54.965738" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<arg>${utilisateur}</arg>
+<arg>java -Duser.language\=fr -Duser.country\=FR -jar SUT/Felix_Java-0.6.jar</arg>
+<arg>stdout=/dev/null</arg>
+<arg>stderr=/dev/null</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<status status="PASS" start="2026-05-03T13:53:52.034794" elapsed="2.931107"/>
+</kw>
+<kw name="Set Jemmy Timeouts" owner="RemoteSwingLibrary">
+<arg>2</arg>
+<doc>Sets all relevant jemmy timeouts. 
+By default they are all set to 5 seconds.</doc>
+<status status="PASS" start="2026-05-03T13:53:54.966358" elapsed="0.545962"/>
+</kw>
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.512800" elapsed="0.000411"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:52.034166" elapsed="3.479151"/>
+</kw>
+<kw name="When L'utilisateur modifie l'adresse ${IP_DEFAUT}" owner="FelixJava" source_name="l'${utilisateur} modifie l'adresse ${ip}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.514655" elapsed="0.000265"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.515262" elapsed="0.055521"/>
+</kw>
+<kw name="Focus To Component" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.571540" elapsed="0.037338"/>
+</kw>
+<kw name="Clear Text Field" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Clears contents of text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:55.609290" elapsed="0.050483"/>
+</kw>
+<kw name="Type Into Text Field" owner="RemoteSwingLibrary">
+<arg>IP</arg>
+<arg>${ip}</arg>
+<doc>Types text into a text component (e.g. text field, password field, text area).
+Same as `Insert Into Textfield` but sends real key events when setting text field contents.
+Useful if application expects real keyboard events instead of only setting the text of the textfield.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.660378" elapsed="0.031484"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:55.513958" elapsed="0.178070"/>
+</kw>
+<kw name="And L'utilisateur modifie le numéro du ${PORT_DEFAUT}" owner="FelixJava" source_name="l'${utilisateur} modifie le numéro du ${port}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.693529" elapsed="0.000318"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.694224" elapsed="0.007190"/>
+</kw>
+<kw name="Focus To Component" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.701988" elapsed="0.012399"/>
+</kw>
+<kw name="Clear Text Field" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<doc>Clears contents of text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:55.715028" elapsed="0.039374"/>
+</kw>
+<kw name="Type Into Text Field" owner="RemoteSwingLibrary">
+<arg>port</arg>
+<arg>${port}</arg>
+<doc>Types text into a text component (e.g. text field, password field, text area).
+Same as `Insert Into Textfield` but sends real key events when setting text field contents.
+Useful if application expects real keyboard events instead of only setting the text of the textfield.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.755816" elapsed="0.029626"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:55.692667" elapsed="0.093031"/>
+</kw>
+<kw name="And L'utilisateur demande à se connecter" owner="FelixJava" source_name="l'${utilisateur} demande à se connecter">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.786960" elapsed="0.000333"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.787676" elapsed="0.007783"/>
+</kw>
+<kw name="Click On Component" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Clicks on a component, optionally using click count, a specific mouse button and keyboard modifiers.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.796022" elapsed="0.040577"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:55.786243" elapsed="0.050656"/>
+</kw>
+<kw name="Then Un message informe l'utilisateur qu'une connexion est initiée à l'adresse ${IP_DEFAUT} et au ${PORT_DEFAUT} mentionnés" owner="FelixJava" source_name="Un message informe l'${utilisateur} qu'une connexion est initiée à l'adresse ${ip} et au ${port} mentionnés">
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2026-05-03T13:53:55.842099" level="INFO">${port_nombre} = 12345</msg>
+<var>${port_nombre}</var>
+<arg>${port}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.840913" elapsed="0.001279"/>
+</kw>
+<kw name="Format String" owner="String">
+<msg time="2026-05-03T13:53:55.843394" level="INFO">${message_attendu} = Connexion au chat @127.0.0.1:12345</msg>
+<var>${message_attendu}</var>
+<arg>${MESSAGE_INFORMATION_CONNEXION_IP_PORT}</arg>
+<arg>ip=${ip}</arg>
+<arg>port=${port_nombre}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.842712" elapsed="0.000749"/>
+</kw>
+<kw name="L'${utilisateur} Est Informé ${message_attendu}" owner="FelixJava" source_name="l'${utilisateur} est informé ${message_attendu}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.845665" elapsed="0.000305"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.846369" elapsed="0.007453"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:55.864878" level="INFO">${message} = Connexion au chat @127.0.0.1:12345</msg>
+<var>${message}</var>
+<arg>information</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:55.854374" elapsed="0.010629"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${message_attendu}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.865419" elapsed="0.000646"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:55.844813" elapsed="0.021368"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:55.838870" elapsed="0.027390"/>
+</kw>
+<kw name="And Après le délai de connexion, un message informe l'utilisateur que la connexion est impossible à l'adresse ${IP_DEFAUT} et au ${PORT_DEFAUT} mentionnés" owner="FelixJava" source_name="Après le délai de connexion, un message informe l'${utilisateur} que la connexion est impossible à l'adresse ${ip} et au ${port} mentionnés">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-03T13:53:58.869098" level="INFO">Slept 3 seconds.</msg>
+<arg>${DELAI_CONNEXION}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-03T13:53:55.868053" elapsed="3.001326"/>
+</kw>
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2026-05-03T13:53:58.881850" level="INFO">${port_nombre} = 12345</msg>
+<var>${port_nombre}</var>
+<arg>${port}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2026-05-03T13:53:58.870049" elapsed="0.011933"/>
+</kw>
+<kw name="Format String" owner="String">
+<msg time="2026-05-03T13:53:58.883246" level="INFO">${message_attendu} = Connexion au chat @127.0.0.1:12345 impossible.</msg>
+<var>${message_attendu}</var>
+<arg>${MESSAGE_INFORMATION_CONNEXION_IMPOSSIBLE}</arg>
+<arg>ip=${ip}</arg>
+<arg>port=${port_nombre}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<status status="PASS" start="2026-05-03T13:53:58.882492" elapsed="0.000826"/>
+</kw>
+<kw name="L'${utilisateur} Est Informé ${message_attendu}" owner="FelixJava" source_name="l'${utilisateur} est informé ${message_attendu}">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:58.885659" elapsed="0.000337"/>
+</kw>
+<kw name="Select Window" owner="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" start="2026-05-03T13:53:58.886425" elapsed="0.011055"/>
+</kw>
+<kw name="Get Text Field Value" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:53:58.909038" level="INFO">${message} = Connexion au chat @127.0.0.1:12345 impossible.</msg>
+<var>${message}</var>
+<arg>information</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" start="2026-05-03T13:53:58.898312" elapsed="0.010894"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${message_attendu}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-05-03T13:53:58.909790" elapsed="0.000898"/>
+</kw>
+<tag>robot:private</tag>
+<status status="PASS" start="2026-05-03T13:53:58.884750" elapsed="0.026094"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:55.867292" elapsed="3.043683"/>
+</kw>
+<kw name="l'utilisateur ferme le client chat" owner="FelixJava" type="TEARDOWN" source_name="l'${utilisateur} ferme le client chat">
+<kw name="Switch To Application" owner="RemoteSwingLibrary">
+<arg>${utilisateur}</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+The application is identified using the ``alias``.
+Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" start="2026-05-03T13:53:58.912378" elapsed="0.000341"/>
+</kw>
+<kw name="System Exit" owner="RemoteSwingLibrary">
+<msg time="2026-05-03T13:54:01.612029" level="INFO">Connection died as expected</msg>
+<msg time="2026-05-03T13:54:01.612220" level="INFO">Waiting for process to complete.</msg>
+<doc>Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<status status="PASS" start="2026-05-03T13:53:58.913100" elapsed="2.699318"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:58.911588" elapsed="2.701040"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:52.030246" elapsed="9.582542"/>
+</kw>
+<status status="PASS" start="2026-05-03T13:53:52.028819" elapsed="9.584717"/>
+</test>
+<doc>User Story : Se connecter au chat
+
+[En tant qu'] utilisateur du chat
+[Je dois pouvoir] saisir une adresse IP et un numéro de port
+[Et] me connecter au chat
+[Afin d'] entrer dans le chat à l'adresse IP et au port mentionnés
+
+Business Rules :
+Le délai de connexion est de 3 secondes (configuration).</doc>
+<status status="PASS" start="2026-05-03T13:52:22.652335" elapsed="98.963219"/>
+</suite>
+<status status="PASS" start="2026-05-03T13:52:22.650000" elapsed="98.969218"/>
+</suite>
+<status status="PASS" start="2026-05-03T13:52:22.643893" elapsed="98.978433"/>
+</suite>
+<status status="PASS" start="2026-05-03T13:52:22.489092" elapsed="99.136181"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Chat TVS RF-v0.6.todo" id="s1" pass="4" fail="0" skip="0">Chat TVS RF-v0.6.todo</stat>
+<stat name="Test" id="s1-s1" pass="4" fail="0" skip="0">Chat TVS RF-v0.6.todo.Test</stat>
+<stat name="US" id="s1-s1-s1" pass="4" fail="0" skip="0">Chat TVS RF-v0.6.todo.Test.US</stat>
+<stat name="US-SeConnecterAuChat" id="s1-s1-s1-s1" pass="4" fail="0" skip="0">Chat TVS RF-v0.6.todo.Test.US.US-SeConnecterAuChat</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

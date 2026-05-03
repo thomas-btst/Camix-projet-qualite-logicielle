@@ -1,0 +1,4 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1777831145678,12,Requête TCP - Connexion,200,OK,Groupe d'unités 1-1,text,true,,60,0,1,1,null,12,0,10
+1777831146201,1,Requête TCP - Changement surnom 1,200,OK,Groupe d'unités 1-1,text,true,,19,0,1,1,null,1,0,0
+1777831146714,1,Requête TCP - Changement surnom 2,200,OK,Groupe d'unités 1-1,text,true,,22,0,1,1,null,1,0,0

@@ -1,0 +1,16 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1777831161929,6,Requête TCP - Connexion,200,OK,Groupe d'unités 1-1,text,true,,60,0,1,1,null,6,0,5
+1777831162450,1,Requête TCP - Changement surnom 1,200,OK,Groupe d'unités 1-1,text,true,,22,0,1,1,null,1,0,0
+1777831162955,0,Requête TCP - Changement surnom 2,200,OK,Groupe d'unités 1-1,text,true,,28,0,1,1,null,0,0,0
+1777831163461,3,Requête TCP - Connexion,200,OK,Groupe d'unités 1-1,text,true,,60,0,1,1,null,3,0,2
+1777831163966,1,Requête TCP - Changement surnom 1,200,OK,Groupe d'unités 1-1,text,true,,21,0,1,1,null,1,0,0
+1777831164477,1,Requête TCP - Changement surnom 2,200,OK,Groupe d'unités 1-1,text,true,,24,0,1,1,null,1,0,0
+1777831164987,2,Requête TCP - Connexion,200,OK,Groupe d'unités 1-1,text,true,,60,0,1,1,null,2,0,1
+1777831165499,1,Requête TCP - Changement surnom 1,200,OK,Groupe d'unités 1-1,text,true,,22,0,1,1,null,1,0,0
+1777831166009,1,Requête TCP - Changement surnom 2,200,OK,Groupe d'unités 1-1,text,true,,28,0,1,1,null,1,0,0
+1777831166519,3,Requête TCP - Connexion,200,OK,Groupe d'unités 1-1,text,true,,60,0,1,1,null,3,0,2
+1777831167028,1,Requête TCP - Changement surnom 1,200,OK,Groupe d'unités 1-1,text,true,,20,0,1,1,null,1,0,0
+1777831167535,1,Requête TCP - Changement surnom 2,200,OK,Groupe d'unités 1-1,text,true,,26,0,1,1,null,1,0,0
+1777831168048,2,Requête TCP - Connexion,200,OK,Groupe d'unités 1-1,text,true,,60,0,1,1,null,2,0,1
+1777831168555,2,Requête TCP - Changement surnom 1,200,OK,Groupe d'unités 1-1,text,true,,20,0,1,1,null,2,0,1
+1777831169062,1,Requête TCP - Changement surnom 2,200,OK,Groupe d'unités 1-1,text,true,,26,0,1,1,null,1,0,0

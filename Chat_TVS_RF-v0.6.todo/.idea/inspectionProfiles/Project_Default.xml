@@ -1,0 +1,39 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="anyio" />
+          <option value="ariadne" />
+          <option value="blinker" />
+          <option value="certifi" />
+          <option value="charset-normalizer" />
+          <option value="click" />
+          <option value="colorama" />
+          <option value="Flask" />
+          <option value="flask-swagger-ui" />
+          <option value="graphql-core" />
+          <option value="grpcio" />
+          <option value="grpcio-tools" />
+          <option value="idna" />
+          <option value="itsdangerous" />
+          <option value="Jinja2" />
+          <option value="MarkupSafe" />
+          <option value="protobuf" />
+          <option value="py-mon" />
+          <option value="requests" />
+          <option value="setuptools" />
+          <option value="sniffio" />
+          <option value="starlette" />
+          <option value="typing_extensions" />
+          <option value="urllib3" />
+          <option value="watchdog" />
+          <option value="Werkzeug" />
+          <option value="pymongo" />
+          <option value="python-dotenv" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

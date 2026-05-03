@@ -1,0 +1,12 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1777831316001,4,Requête TCP - Connexion Client 1,200,OK,Groupe d'unités : Client 1 1-1,text,true,,60,0,1,2,null,4,0,3
+1777831316010,3003,Requête TCP - Consultation,200,OK,Groupe d'unités : Client 1 1-1,text,true,,60,0,1,2,null,3003,0,0
+1777831319011,2,Requête TCP - Connexion Client 2,200,OK,Groupe d'unités : Client 2 2-1,text,true,,60,0,1,2,null,2,0,1
+1777831322094,1,Requête TCP - Changer surnom Client 1,200,OK,Groupe d'unités : Client 1 1-1,text,true,,19,0,1,2,null,1,0,0
+1777831319016,3080,Requête TCP : Consultation,200,OK,Groupe d'unités : Client 2 2-1,text,true,,19,0,1,2,null,3080,0,1
+1777831322104,3076,Requête TCP : Consultation,200,OK,Groupe d'unités : Client 1 1-1,text,true,,19,0,1,2,null,3076,0,0
+1777831325179,1,Requête TCP - Changer surnom Client 2,200,OK,Groupe d'unités : Client 2 2-1,text,true,,19,0,1,2,null,1,0,0
+1777831328289,1,Requête TCP : Envoyer message Client 1,200,OK,Groupe d'unités : Client 1 1-1,text,true,,19,0,1,2,null,1,0,0
+1777831325182,3108,Requête TCP : Consultation,200,OK,Groupe d'unités : Client 2 2-1,text,true,,19,0,1,2,null,3108,0,0
+1777831328292,3047,Requête TCP : Consultation,200,OK,Groupe d'unités : Client 1 1-1,text,true,,19,0,1,2,null,3047,0,0
+1777831331337,1,Requête TCP : Envoyer message Client 2,200,OK,Groupe d'unités : Client 2 2-1,text,true,,19,0,1,2,null,1,0,0
