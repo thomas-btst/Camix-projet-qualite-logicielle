@@ -5,7 +5,22 @@
 Tous les TODOs ont été réalisés et se trouvent dans le sous-dossier `src/test/camix/service/`.
 Il y a un fichier de test dédié pour chaque TODO numéroté : `Ex1`, `Ex2`...
 
-Le bonus concernant la **génération de tests automatisée avec l'IA** a également été réalisé dans le dossier `TODO`.
+## Tests JUnit générés par IA (dossier `Camix_Java-v0.5_IA/`)
+
+Le bonus concernant la **génération de tests automatisée avec l'IA** a été réalisé dans le dossier `Camix_Java-v0.5_IA/`.
+
+Les tests ont été générés via **Codex** (agent de génération de code). Les preuves de génération se trouvent dans :
+- `AI_INTEGRATION_REPORT.md` : compte rendu complet avec analyse critique
+- `CODEX_TIMELINE_2026-04-09.md` : timeline de la session Codex (75 commandes, 25 patches)
+- `rollout-....jsonl` : trace brute de la session
+
+Les tests couvrent les 5 TODOs (un fichier par TODO) avec les techniques vues en cours :
+- `CanalChatAjouteClientTest.java` — TODO1 : AAA + Mockito
+- `CanalChatAjouteClientNestedGwtTest.java` — TODO2 + TODO3 : GWT via `@Nested` + extension `@SkipOnFailureInEnclosingClass`
+- `ServiceChatSupprimeCanalTest.java` — TODO4 : `assertThrows`
+- `ClientChatChangeSurnomParameterizedTest.java` — TODO5 : réflexion + `@EnumSource` + `@MethodSource`
+
+Les rapports d'exécution Maven Surefire se trouvent dans `target/surefire-reports/`.
 
 ---
 
