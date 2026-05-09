@@ -7,7 +7,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.mockito.Mockito.*;
 
-@DisplayName("Etant donné un CannalChat vide à sa création")
+@DisplayName("Etant donné un CanalChat vide à sa création")
 @ExtendWith(MockitoExtension.class)
 public class Ex2CanalChatTest {
     @Mock
